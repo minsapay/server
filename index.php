@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-
-<?php
-    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-    $server = $url["host"];
-    $username = $url["user"];
-    $password = $url["pass"];
-    $db = substr($url["path"], 1);
-
-    $conn = new mysqli($server, $username, $password, $db);
-    echo "<h3>This is a php embbeded title</h3>";
-    echo "한국어 테스트";
-
-
-?>
-
     <html>
         <head>
-	        <title>제목</title>
+            <meta charset="utf-8">
+	        <title>MinsaPay</title>
         </head>
-    <body>
-        <h1>This is a Title</h1>
-        <h2>This is a second title</h2>
-        <h3>This is a third title</h3>
-    </body>
-</html>
+        <body>
+            <h1>Home</h1>
+            <h3>Welcome to MinsaPay</h3>
+            <form action="login.php">
+                <input type="button" name="login" value="AUTHORIZED USER ONLY">
+            </form>
+            <form action="balance.php">
+                <input type="button" name="balance" value="Balance Check (로그인 불필요)">
+            </form>
+        </body> 
+        <hr>
+        <blockquote>
+            Copyright 2019. Dotnet. all rights reserved
+        </blockquote>
+    </html>
