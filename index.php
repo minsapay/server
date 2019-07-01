@@ -7,13 +7,8 @@
         <body>
             <h1>Welcome to MinsaPay</h1>
 
-            <form action="balance.php">
-                <input type="button" name="balance" value="Balance Check (로그인 불필요)">
-            </form>
-
-            <form action="login.php">
-                <input type="button" name="login" value="Authorized User Only (로그인 필요)">
-            </form>
+            <button type="button" onclick="location.href='balance.php' ">Balance Check (로그인 불필요)</button>
+            <button type="button" onclick="location.href='login.php' ">Authorized User Only (로그인 필요)</button>
 
         </body> 
         <hr>
