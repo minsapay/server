@@ -35,18 +35,18 @@
             else
             {
                 echo "<script>alert(\"세션 저장 실패\");</script>";
-                header("Refresh:0");
+                header('Location: ./login.html');
             }
         }
         else
         {
             echo "<script>alert(\"Wrong ID of PW\");</script>";
-            header("Refresh:0");
+            header('Location: ./login.html');
         }
     }
     else
     {
         echo "<script>alert(\"Wrong ID of PW\");</script>";
-        header("Refresh:0");
+        header('Location: ./login.html');
     }
 ?>
