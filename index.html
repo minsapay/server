@@ -1,3 +1,11 @@
-<h1>나는 제목이다.</h1>
-<h2>나는 또 다른 제목이다.</h2>
-<h3>나는 제 3의 제목이다.</h3>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>제목</title>
+</head>
+<body>
+<h1>This is a Title</h1>
+<h2>This is a second title</h2>
+<h3>This is a third title</h3>
+</body>
+</html>
