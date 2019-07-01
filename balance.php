@@ -6,15 +6,10 @@
         </head>
         <body>
             <h1>Welcome to MinsaPay</h1>
-
-            <form action="balance.php">
-                <input type="button" name="balance" value="Balance Check (로그인 불필요)">
+            <form method="POST" action="balancecheck.php">
+                <input type="number" name="studentid" value="Student ID number">
+                <input type="submit" value="잔액 확인">
             </form>
-
-            <form action="login.php">
-                <input type="button" name="login" value="Authorized User Only (로그인 필요)">
-            </form>
-
         </body> 
         <hr>
         <blockquote>
