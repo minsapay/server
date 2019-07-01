@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+	        <title>login</title>
+        </head>
+        <body>
+            <h1><a href="index.php">MinsaPay</a></h1>
+            <h3>Authorized user login</h3>
+            <form method="post" action="/login_check.php">
+                <div>
+                    <label for="id">ID </label>
+                    <input type="text" name="id"/>
+                </div>
+                <div>
+                    <label for="pw">PW </label>
+                    <input type="text" name="pw"/>
+                </div>
+                
+                <div class="button">
+                    <button type="submit"> login </button>
+                </div>
+            </form>
+            <button onclick="location.href='signUp.html'"> (부스 운영자) 회원가입 </button>
+        </body> 
+        <hr>
+        <blockquote>
+            Copyright 2019. Dotnet. all rights reserved
+        </blockquote>
+    </html>
