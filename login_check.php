@@ -33,12 +33,20 @@
                 header('Location: ./main.php');   
             }
             else
-                echo "세션 저장 실패";
+            {
+                echo "<script>alert(\"세션 저장 실패\");</script>";
+                header("Refresh:0");
+            }
         }
         else
-            echo "wrong id or pw";
+        {
+            echo "<script>alert(\"Wrong ID of PW\");</script>";
+            header("Refresh:0");
+        }
     }
     else
-        echo "wrong id or pw";
-    
+    {
+        echo "<script>alert(\"Wrong ID of PW\");</script>";
+        header("Refresh:0");
+    }
 ?>
