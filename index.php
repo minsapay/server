@@ -10,6 +10,9 @@
 
     $conn = new mysqli($server, $username, $password, $db);
     echo "<h3>This is a php embbeded title</h3>";
+    echo "한국어 테스트";
+
+
 ?>
 
     <html>
