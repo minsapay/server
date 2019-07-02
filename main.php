@@ -20,21 +20,29 @@
         <h4>(Authorized User Only)</h4>
         <?php
             $id = $_SESSION['userid'];
-            $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-            $server = $url["host"];
-            $username = $url["user"];
-            $password = $url["pass"];
-            $db = substr($url["path"], 1);
-        
-            $mysqli=mysqli_connect($server, $username, $password, $db);
+            require('db.php');
             
             $check="SELECT * FROM user_info WHERE userid='$id'";
             $result=$mysqli->query($check); 
             $row=$result->fetch_array(MYSQLI_ASSOC);
             $boothname = $row['boothname'];
 
-            echo "<h4>{$boothname} 님 환영합니다.</h4>";
+            echo "<h4> 현재 로그인 된 부스: {$boothname}</h4>";
+            $isAdmin = $row['admin'];
+            if($isAdmin)
+            {
+                ?>
+                    <button type="button" onclick="location.href='add_account.php' ">사용자 계좌 추가</button>
+                    <button type="button" onclick="location.href='charge.php' ">계좌 충전 관리</button>
+                <?php
+            }
+            else
+            {
+                ?>
+                    <button type="button" onclick="location.href='booth.php' ">부스 관리 콘솔로 이동</button>
+                <?php
+            }
         ?>
         <br>
         <button type="button" onclick="location.href='logout.php' ">로그아웃</button>
