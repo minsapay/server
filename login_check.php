@@ -22,7 +22,7 @@
         $row=$result->fetch_array(MYSQLI_ASSOC);
 
          //MYSQLI_ASSOC 필드명으로 첨자 가능
-        if(password_verify($row['userpw'], $pw))
+        if(password_verify($pw, $row['userpw']))
         {
             //로그인 성공 시 세션 변수 만들기
             $_SESSION['userid']=$id;           
