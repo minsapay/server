@@ -1,4 +1,5 @@
 <?php
+    include "../password.php";
     session_start();
     $id=$_POST['id'];
     $pw=$_POST['pw'];
@@ -21,7 +22,7 @@
         $row=$result->fetch_array(MYSQLI_ASSOC);
 
          //MYSQLI_ASSOC 필드명으로 첨자 가능
-        if($row['userpw']==$pw)
+        if(password_verify($row['userpw'], $password))
         {
             //로그인 성공 시 세션 변수 만들기
             $_SESSION['userid']=$id;           
