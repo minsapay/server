@@ -41,12 +41,13 @@
             $balance=0;
     }
     $rfid=$_POST['rfid'];
-    echo $numid;
-    echo "<br>";
+    if($numid==NULL)
+        echo $numid;
+    if($freepass==NULL)
     echo $freepass;
-    echo "<br>";
+    if($balance==NULL)
     echo $balance;
-    echo "<br>";
+    if($rfid==NULL)
     echo $rfid;
     if($numid==NULL || $freepass==NULL || $balance==NULL || $rfid==NULL)
     {
