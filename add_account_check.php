@@ -24,7 +24,7 @@
     }
 
     // 행정위 직원이 들어왔을 때(정상적인 상황)
-    $id=$_POST['id'];
+    $numid=$_POST['id'];
     if (isset($_POST['freepass']) && $_POST['freepass'] == 'yes') 
         $freepass=1;
     else
@@ -41,14 +41,14 @@
             $balance=0;
     }
     $rfid=$_POST['rfid'];
-    echo $id;
+    echo $numid;
     echo "<br>";
     echo $freepass;
     echo "<br>";
     echo $balance;
     echo "<br>";
     echo $rfid;
-    if($id==NULL || $freepass==NULL || $balance==NULL || $rfid==NULL)
+    if($numid==NULL || $freepass==NULL || $balance==NULL || $rfid==NULL)
     {
         echo "빈 칸을 모두 채워주세요";
         echo "<br><button onclick=\"location.href='add_account.php'\"> 돌아가기 </button>";
@@ -62,7 +62,7 @@
         echo "<br><button onclick=\"location.href='add_account.php'\"> 돌아가기 </button>";
         exit();
     }
-    $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$id')");
+    $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')");
     if($signup)
     {
         ?>
