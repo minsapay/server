@@ -14,15 +14,10 @@ body {
 	text-align: center;
 	left: 50%;
 	top: 50%;
-	margin: auto;
+	margin: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	color: black;
-}
-
-hr {
-	padding: 0px;
-	margin: 10px;
 }
 
 input {

@@ -14,7 +14,7 @@
             </form>
             <button type="button" onclick="location.href='main.php' ">운영진 로그인</button>
         </body> 
-        <hr>
+
         <blockquote>
             Copyright 2019. Dotnet. all rights reserved
         </blockquote>
