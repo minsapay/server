@@ -44,6 +44,12 @@
             <label for="freepass"> 문기부 FREEPASS? </label>
             <input type="checkbox" name="freepass" value="yes"/>
         </div>
+        <div>
+            <label for="info"> 초기 충전 금액 </label>
+            <input type="radio" name="info" value="normal">일반인 (0원)
+            <input type="radio" name="info" value="senior">3학년 (7000원 기본 충전)
+            <input type="radio" name="info" value="teacher">선생님 (10000원 기본 충전)
+        </div>
         
         <div>
             <label for="rfid"> RFID 등록 (리더기로 찍기) </label>

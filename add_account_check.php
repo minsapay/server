@@ -29,10 +29,20 @@
         $freepass=1;
     else
         $freepass=0;
-
+    switch($_POST['info'])
+    {
+        case "senior":
+            $balance=7000;
+            break;
+        case "teacher":
+            $balance=10000;
+            break;
+        default:
+            $balance=0;
+    }
     $rfid=$_POST['rfid'];
 
-    if($id==NULL || $freepass==NULL || $rfid==NULL)
+    if($id==NULL || $freepass==NULL || $balance==NULL || $rfid==NULL)
     {
         echo "빈 칸을 모두 채워주세요";
         echo "<br><button onclick=\"location.href='add_account.php'\"> 돌아가기 </button>";
@@ -46,7 +56,7 @@
         echo "<br><button onclick=\"location.href='add_account.php'\"> 돌아가기 </button>";
         exit();
     }
-    $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,freepass,idnumber) VALUES ('$rfid','$freepass','$id')");
+    $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$id')");
     if($signup)
     {
         ?>
