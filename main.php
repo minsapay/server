@@ -31,9 +31,9 @@
             $boothname = $row['boothname'];
 
             echo "<h4> 현재 로그인 된 부스</h4>";
-            <br>
+            echo "<br>";
             echo "<h3> {$boothname} </h3>";
-            <br>
+            echo "<br>";
             $isAdmin = $row['admin'];
             if($isAdmin)
             {
