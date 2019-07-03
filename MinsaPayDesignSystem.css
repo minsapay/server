@@ -53,6 +53,10 @@ input[type=submit] {
 	font-size: 16px;
 }
 
+hr {
+	padding: 0px;
+}
+
 a {
 	text-decoration: none;
 }
