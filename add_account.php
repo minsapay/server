@@ -42,7 +42,7 @@
         </div>
         <div>
             <label for="freepass"> 문기부 FREEPASS? </label>
-            <input type="checkbox" name="freepass"/>
+            <input type="checkbox" name="freepass" value="yes"/>
         </div>
         <div>
             <label for="balance"> 초기 충전 금액 </label>

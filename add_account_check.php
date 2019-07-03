@@ -25,7 +25,11 @@
 
     // 행정위 직원이 들어왔을 때(정상적인 상황)
     $id=$_POST['id'];
-    $freepass=$_POST['freepass'];
+    if (isset($_POST['freepass']) && $_POST['freepass'] == 'yes') 
+        $freepass=1;
+    else
+        $freepass=0;
+
     $balance=$_POST['balance'];
     $rfid=$_POST['rfid'];
 
