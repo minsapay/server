@@ -50,8 +50,8 @@
         </div>
         
         <div>
-            <label for="booth"> RFID 등록 (리더기로 찍기) </label>
-            <input type="number" name="booth"/>
+            <label for="rfid"> RFID 등록 (리더기로 찍기) </label>
+            <input type="number" name="rfid"/>
         </div>
         <div class="button">
             <input type="submit" value="submit">
