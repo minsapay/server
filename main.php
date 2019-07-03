@@ -37,19 +37,19 @@
             if($isAdmin)
             {
                 ?>
-                    <button type="button" onclick="location.href='add_account.php' ">사용자 계좌 추가</button>
-                    <button type="button" onclick="location.href='charge.php' ">계좌 충전 관리</button>
+                    <button type="button" class = "button1" onclick="location.href='add_account.php' ">사용자 계좌 추가</button>
+                    <button type="button" class = "button1" onclick="location.href='charge.php' ">계좌 충전 관리</button>
                 <?php
             }
             else
             {
                 ?>
-                    <button type="button" onclick="location.href='booth.php' ">부스 관리 콘솔로 이동</button>
+                    <button type="button" class = "button1" onclick="location.href='booth.php' ">부스 관리 콘솔로 이동</button>
                 <?php
             }
         ?>
         <br>
-        <button type="button" onclick="location.href='logout.php' ">로그아웃</button>
+        <button type="button" class = "button2" onclick="location.href='logout.php' ">로그아웃</button>
     </body> 
     <blockquote>
         Copyright 2019. Dotnet. all rights reserved

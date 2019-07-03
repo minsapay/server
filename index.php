@@ -8,11 +8,11 @@
         </head>
         <body>
             <h1><a href="index.php">민사페이</a></h1>
-            <form method="POST" action="balance_check.php">
+            <form method="POST" id="Balance Check Form" action="balance_check.php">
                 <input type="number" name="studentid" placeholder = "학번을 입력해주세요" value="Student ID number"> <br>
-                <input type="submit" value="잔액 확인 💵">
             </form>
-            <button type="button" onclick="location.href='main.php' ">운영진 로그인</button>
+            <button type="submit" class = "button1" form="Balance Check Form" value="잔액 확인">잔액 확인</button>
+            <button type="button" class = "button2" onclick="location.href='main.php' ">운영진 로그인</button>
         </body> 
 
         <blockquote>

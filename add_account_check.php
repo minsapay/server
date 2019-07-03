@@ -66,6 +66,7 @@
         <?php
     }
     else
-        echo "<br><button onclick=\"location.href='signUp.html'\"> 계좌 등록 실패, 돌아가기 </button>";
+ echo "<br><button onclick=\"location.href='signUp.html'\"> 계좌 등록 실패, 돌아가기 </button>";
+ 
     
 ?>
