@@ -32,7 +32,7 @@
         <body>
             <h1><a href="index.php">MinsaPay</a></h1>
             <h3>계좌 충전 (행정위 전용 페이지)</h3>
-    <form action = "add_account_check.php" method="POST">
+    <form action = "charge_check.php" method="POST">
         <div>
             <label for="amount"> 충전할 금액 (원) </label>
             <input type="number" name="amount">

@@ -61,11 +61,11 @@
     {
         ?>
         <meta charset="utf-8" />
-        <script type="text/javascript">alert('회원가입이 완료되었습니다.');</script>
+        <script type="text/javascript">alert('계좌 등록이 완료되었습니다.');</script>
         <meta http-equiv="refresh" content="0 url=/">
         <?php
     }
     else
-        echo "<br><button onclick=\"location.href='signUp.html'\"> 회원가입 실패, 돌아가기 </button>";
+        echo "<br><button onclick=\"location.href='signUp.html'\"> 계좌 등록 실패, 돌아가기 </button>";
     
 ?>
