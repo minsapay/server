@@ -21,7 +21,8 @@ body {
 }
 
 hr {
-	padding: 10px;
+	padding: 0px;
+	margin: 10px;
 }
 
 input {
