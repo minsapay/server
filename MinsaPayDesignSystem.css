@@ -7,12 +7,26 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-h3 {
-	font-size: 16px;
+h1 {
+  font-size: 28px;
 }
 
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px; }
+
 h4 {
-	font-size: 12px;
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px;
 }
 
 * {
