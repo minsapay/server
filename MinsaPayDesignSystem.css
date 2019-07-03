@@ -8,6 +8,7 @@ body {
 }
 
 * {
+	margin: 10px;
 	font-family: 'Noto Sans KR', sans-serif;
 	max-width: 800px;
 	text-align: center;
@@ -27,15 +28,14 @@ input {
 	width: 400px;
 }
 
-input[type=number] {
+input {
     font-size:16px;
-    border: none;
-    border-bottom: 1px solid gray;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 
 input[type=submit] {
 	background-color: #4CAF50;
@@ -52,7 +52,6 @@ a {
 }
 
 button {
-	margin: 50px;
 	width: 400px;
 	background-color: #4CAF50;
 	border: none;

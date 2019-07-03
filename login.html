@@ -1,27 +1,27 @@
-<!DOCTYPE html>
+{$boothname}<!DOCTYPE html>
     <html>
         <head>
             <meta charset="utf-8">
-	        <title>login</title>
+	        <title>로그인</title>
+            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
         </head>
         <body>
-            <h1><a href="index.php">MinsaPay</a></h1>
-            <h3>Authorized user login</h3>
+            <h1><a href="index.php">민사페이</a></h1>
+            <h3>운영진 로그인</h3>
             <form method="POST" action="/login_check.php">
                 <div>
-                    <label for="id">ID </label>
-                    <input type="text" name="id"/>
+                    <input type="text" placeholder="아이디 입력하기" name="id"/>
                 </div>
                 <div>
-                    <label for="pw">PW </label>
-                    <input type="password" name="pw"/>
+                    <input type="password" placeholder="비밀번호 입력하기" name="pw"/>
                 </div>
                 
                 <div class="button">
-                    <button type="submit"> login </button>
+                    <button type="submit">로그인</button>
                 </div>
             </form>
-            <button onclick="location.href='signUp.html'"> (부스 운영자) 회원가입 </button>
+            <button onclick="location.href='signUp.html'"> 운영진 가입하기 </button>
         </body> 
         <hr>
         <blockquote>

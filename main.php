@@ -30,7 +30,8 @@
             $row=$result->fetch_array(MYSQLI_ASSOC);
             $boothname = $row['boothname'];
 
-            echo "<h4> 현재 로그인 된 부스: {$boothname}</h4>";
+            echo "<h4> 현재 로그인 된 부스</h4>";
+            echo "<h3> {$boothname}"
             $isAdmin = $row['admin'];
             if($isAdmin)
             {
