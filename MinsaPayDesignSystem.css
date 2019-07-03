@@ -22,6 +22,7 @@ body {
 
 hr {
 	padding: 0px;
+	margin: 10px;
 }
 
 input {
@@ -29,6 +30,8 @@ input {
 }
 
 input {
+	border: none;
+	border-bottom: 1px solid black;
     font-size:16px;
     margin-top: 10px;
     margin-bottom: 10px;
