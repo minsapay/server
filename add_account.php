@@ -34,7 +34,7 @@
         <body>
             <h1><a href="index.php">MinsaPay</a></h1>
             <h3>Add account (행정위 전용 페이지)</h3>
-    <form action = "signUp_check.php" method="POST">
+    <form action = "sadd_account_check.php" method="POST">
         다음을 순서대로 입력
         <div>
             <label for="id"> 학번 입력 (선생님일 경우 주민번호 앞 6자리) </label>
