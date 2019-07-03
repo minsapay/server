@@ -15,8 +15,8 @@
                 $result=$mysqli->query($check); 
                 $row=$result->fetch_array(MYSQLI_ASSOC);
                 $balance = $row['balance'];
-                echo "당신의 잔액은 "
-                echo "<h4>", $balance, "원</h4>"
+                echo "당신의 잔액은 ";
+                echo "<h4>", $balance, "원</h4>";
                 echo"입니다.";
             ?>
         </body> 
