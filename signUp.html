@@ -11,17 +11,17 @@
             <h3>부스 가입하기</h3>
     <form action = "signUp_check.php" method="POST">
         <div>
-            <input type="text" placeholder = "아이디 입력하기" name="id"/>
+            <input type="text" placeholder = "아이디 입력하기" name="id", required/>
         </div>
         <div>
-            <input type="password" placeholder = "비밀번호 입력하기" name="pw"/>
+            <input type="password" placeholder = "비밀번호 입력하기" name="pw", required/>
         </div>
         <div>
-            <input type="password" placeholder = "비밀번호 다시 입력하기" name="pwc"/>
+            <input type="password" placeholder = "비밀번호 다시 입력하기" name="pwc", required/>
         </div>
         
         <div>
-            <input type="text" placeholder = "부스 이름 입력하기" name="booth"/>
+            <input type="text" placeholder = "부스 이름 입력하기" name="booth", required/>
         </div>
         <div class="button">
             <input type="submit" value="가입하기">
