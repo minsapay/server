@@ -41,17 +41,17 @@
             <input type="number" name="id" min="160000" max="999999">
         </div>
         <div>
-            <label for="pw"> PW </label>
-            <input type="text" name="pw"/>
+            <label for="freepass"> 문기부 FREEPASS? </label>
+            <input type="checkbox" name="freepass"/>
         </div>
         <div>
-            <label for="pwc"> PW 재입력 </label>
-            <input type="text" name="pwc"/>
+            <label for="balance"> 초기 충전 금액 </label>
+            <input type="number" name="number"/>
         </div>
         
         <div>
             <label for="booth"> RFID 등록 (리더기로 찍기) </label>
-            <input type="text" name="booth"/>
+            <input type="number" name="booth"/>
         </div>
         <div class="button">
             <input type="submit" value="submit">

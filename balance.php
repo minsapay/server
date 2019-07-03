@@ -7,7 +7,7 @@
         <body>
             <h1><a href="index.php">MinsaPay</a></h1>
             <form method="POST" action="balance_check.php">
-                학번 입력
+                잔액 확인: 학번 입력
                 <br>
                 <input type="number" name="studentid" value="Student ID number">
                 <input type="submit" value="잔액 확인">

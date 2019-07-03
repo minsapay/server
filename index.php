@@ -7,7 +7,19 @@
         <body>
             <h1><a href="index.php">MinsaPay</a></h1>
 
-            <button type="button" onclick="location.href='balance.php' ">Balance Check (로그인 불필요)</button>
+            <form method="POST" action="balance_check.php">
+                잔액 확인: 학번 입력
+                <br>
+                <input type="number" name="studentid" value="Student ID number">
+                <input type="submit" value="잔액 확인">
+            </form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <br>
             <button type="button" onclick="location.href='main.php' ">Authorized User Only (로그인 필요)</button>
 
