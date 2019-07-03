@@ -46,7 +46,7 @@
         </div>
         <div>
             <label for="balance"> 초기 충전 금액 </label>
-            <input type="number" name="number"/>
+            <input type="number" name="balance"/>
         </div>
         
         <div>
