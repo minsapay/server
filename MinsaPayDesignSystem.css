@@ -7,21 +7,29 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+h3 {
+	font-size: 16px;
+}
+
+h4 {
+	font-size: 12px;
+}
+
 * {
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	font-family: 'Noto Sans KR', sans-serif;
 	max-width: 800px;
 	text-align: center;
 	left: 50%;
 	top: 50%;
-	margin: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	color: black;
 }
 
 input {
-	width: 400px;
+	width: 100%;
 }
 
 input {
@@ -45,12 +53,16 @@ input[type=submit] {
 	font-size: 16px;
 }
 
+hr {
+	padding: 0px;
+}
+
 a {
 	text-decoration: none;
 }
 
 button {
-	width: 400px;
+	width: 100%;
 	background-color: #4CAF50;
 	border: none;
 	color: white;
