@@ -23,5 +23,43 @@
         header ('Location: ./main.php');
     }
 
-
+    // 행정위 직원이 들어왔을 때(정상적인 상황)
 ?>
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+	        <title>Add Account</title>
+        </head>
+        <body>
+            <h1><a href="index.php">MinsaPay</a></h1>
+            <h3>Add account (행정위 전용 페이지)</h3>
+    <form action = "signUp_check.php" method="POST">
+        다음을 순서대로 입력
+        <div>
+            <label for="id"> 학번 입력 (선생님일 경우 주민번호 앞 6자리) </label>
+            <input type="number" name="id" min="160000" max="999999">
+        </div>
+        <div>
+            <label for="pw"> PW </label>
+            <input type="text" name="pw"/>
+        </div>
+        <div>
+            <label for="pwc"> PW 재입력 </label>
+            <input type="text" name="pwc"/>
+        </div>
+        
+        <div>
+            <label for="booth"> RFID 등록 (리더기로 찍기) </label>
+            <input type="text" name="booth"/>
+        </div>
+        <div class="button">
+            <input type="submit" value="submit">
+        </div>
+    </form>
+</body>
+<hr>
+<blockquote>
+    Copyright 2019. Dotnet. all rights reserved
+</blockquote>
+</html> 
