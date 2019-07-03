@@ -20,7 +20,6 @@
                 echo"입니다.";
             ?>
         </body> 
-        <hr>
         <blockquote>
             Copyright 2019. Dotnet. all rights reserved
         </blockquote>

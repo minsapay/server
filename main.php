@@ -31,7 +31,9 @@
             $boothname = $row['boothname'];
 
             echo "<h4> 현재 로그인 된 부스</h4>";
-            echo "<h3> {$boothname}";
+            <br>
+            echo "<h3> {$boothname} </h3>";
+            <br>
             $isAdmin = $row['admin'];
             if($isAdmin)
             {
@@ -50,7 +52,6 @@
         <br>
         <button type="button" onclick="location.href='logout.php' ">로그아웃</button>
     </body> 
-    <hr>
     <blockquote>
         Copyright 2019. Dotnet. all rights reserved
     </blockquote>
