@@ -41,7 +41,13 @@
             $balance=0;
     }
     $rfid=$_POST['rfid'];
-
+    echo $id;
+    echo "<br>";
+    echo $freepass;
+    echo "<br>";
+    echo $balance;
+    echo "<br>";
+    echo $rfid;
     if($id==NULL || $freepass==NULL || $balance==NULL || $rfid==NULL)
     {
         echo "빈 칸을 모두 채워주세요";
