@@ -8,7 +8,12 @@
             <h1><a href="index.php">MinsaPay</a></h1>
             <?php
                 $id = $_POST["studentid"];
-                echo "당신의 학번은 ", $id, "입니다";
+                require('db.php');
+                $check="SELECT * FROM account_info WHERE idnumber='$id'";
+                $result=$mysqli->query($check); 
+                $row=$result->fetch_array(MYSQLI_ASSOC);
+                $balance = $row['balance'];
+                echo "당신의 잔액은 ",$balance,"원입니다.";
             ?>
         </body> 
         <hr>
