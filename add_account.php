@@ -38,15 +38,15 @@
         다음을 순서대로 입력
         <div>
             <label for="id"> 학번 입력 (선생님일 경우 주민번호 앞 6자리) </label>
-            <input type="number" name="id" min="160000" max="999999">
+            <input type="number" name="id" min="160000" max="999999" required>
         </div>
         <div>
             <label for="freepass"> 문기부 FREEPASS? </label>
-            <input type="checkbox" name="freepass" value="yes"/>
+            <input type="checkbox" name="freepass" value="yes" required/>
         </div>
         <div>
             <label for="info"> 초기 충전 금액 </label><br>
-            <input type="radio" name="info" value="normal">일반인 (0원)<br>
+            <input type="radio" name="info" value="normal" required>일반인 (0원)<br>
             <input type="radio" name="info" value="senior">3학년 (7000원 기본 충전)<br>
             <input type="radio" name="info" value="teacher">선생님 (10000원 기본 충전)
         </div>

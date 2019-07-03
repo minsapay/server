@@ -41,15 +41,8 @@
             $balance=0;
     }
     $rfid=$_POST['rfid'];
-    if($numid==NULL)
-        echo $numid;
-    if($freepass==NULL)
-    echo $freepass;
-    if($balance==NULL)
-    echo $balance;
-    if($rfid==NULL)
-    echo $rfid;
-    if($numid==NULL || $freepass==NULL || $balance==NULL || $rfid==NULL)
+
+    if($numid==NULL ||  $rfid==NULL)
     {
         echo "빈 칸을 모두 채워주세요";
         echo "<br><button onclick=\"location.href='add_account.php'\"> 돌아가기 </button>";
