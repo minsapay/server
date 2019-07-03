@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+* {
+	margin: 10px;
+	font-family: 'Noto Sans KR', sans-serif;
+	max-width: 800px;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: black;
+}
+
+hr {
+	padding: 0px;
+}
+
+input {
+	width: 400px;
+}
+
+input {
+    font-size:16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+input[type=submit] {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	width: 400px;
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}

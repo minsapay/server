@@ -2,31 +2,29 @@
     <html>
         <head>
             <meta charset="utf-8">
-	        <title>Booth Sign Up</title>
+	        <title>부스 가입하기</title>
+            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
         </head>
         <body>
-            <h1><a href="index.php">MinsaPay</a></h1>
-            <h3>Booth Sign Up</h3>
+            <h1><a href="index.php">민사페이</a></h1>
+            <h3>부스 가입하기</h3>
     <form action = "signUp_check.php" method="POST">
         <div>
-            <label for="id"> ID </label>
-            <input type="text" name="id"/>
+            <input type="text" placeholder = "아이디 입력하기" name="id"/>
         </div>
         <div>
-            <label for="pw"> PW </label>
-            <input type="password" name="pw"/>
+            <input type="password" placeholder = "비밀번호 입력하기" name="pw"/>
         </div>
         <div>
-            <label for="pwc"> PW 재입력 </label>
-            <input type="password" name="pwc"/>
+            <input type="password" placeholder = "비밀번호 다시 입력하기" name="pwc"/>
         </div>
         
         <div>
-            <label for="booth"> Booth Name </label>
-            <input type="text" name="booth"/>
+            <input type="text" placeholder = "부스 이름 입력하기" name="booth"/>
         </div>
         <div class="button">
-            <input type="submit" value="submit">
+            <input type="submit" value="가입하기">
         </div>
     </form>
 </body>
