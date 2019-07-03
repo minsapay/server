@@ -44,10 +44,6 @@
             <label for="freepass"> 문기부 FREEPASS? </label>
             <input type="checkbox" name="freepass" value="yes"/>
         </div>
-        <div>
-            <label for="balance"> 초기 충전 금액 </label>
-            <input type="number" name="balance"/>
-        </div>
         
         <div>
             <label for="rfid"> RFID 등록 (리더기로 찍기) </label>

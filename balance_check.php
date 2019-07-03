@@ -14,6 +14,8 @@
                 $row=$result->fetch_array(MYSQLI_ASSOC);
                 $balance = $row['balance'];
                 echo "당신의 잔액은 ",$balance,"원입니다.";
+                
+
             ?>
         </body> 
         <hr>
