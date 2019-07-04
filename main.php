@@ -47,8 +47,8 @@
                 ?>
                  <form action = "payment_check.php" method="POST">
                     <div>
-                        <label for="price"> 결재할 금액 (원) </label>
-                        <input type="number" name="price" required>
+                        <label for="price"> 결제할 금액 (원) </label>
+                        <input type="number" name="price" min ="0" required>
                     </div>
                     <div>
                         <label for="rfid"> RFID (리더기로 찍기) </label>
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="button">
-                        <input type="submit" value="결재하기">
+                        <input type="submit" value="결제하기">
                     </div>
                 </form>
                 <?php

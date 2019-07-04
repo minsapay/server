@@ -4,7 +4,7 @@
     //세션이 존재하지 않을 때 == 로그인이 아직 안 되어 있을 때
     if(!isset($_SESSION['userid'])) 
     {
-        header ('Location: ./login.html');
+        header ('Location: ./main.php');
     }
     //세션이 존재할 때 == 로그인이 되어 있을 때
     $id = $_SESSION['userid'];

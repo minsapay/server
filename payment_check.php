@@ -4,7 +4,7 @@
     //세션이 존재하지 않을 때 == 로그인이 아직 안 되어 있을 때
     if(!isset($_SESSION['userid'])) 
     {
-        header ('Location: ./login.html');
+        header ('Location: ./main.php');
     }
     //세션이 존재할 때 == 로그인이 되어 있을 때
     $id = $_SESSION['userid'];
@@ -38,26 +38,32 @@
         $row2=$result2->fetch_array(MYSQLI_ASSOC);
         $idnum = $row2['idnumber'];
         $money=$row2['balance'];
-        $total = $money + $amount;
+        $total = $money - $price;
         ?>
         <script>
-        var con_test = confirm("<?php echo $idnum," 계좌에 ",$amount,"원 만큼 충전하겠습니까?"?>.");
+        var con_test = confirm("<?php echo $idnum," 고객에게 ",$amount,"원 만큼 결제합니다"?>.");
         if(con_test == false){
-            location.href="charge.php";
+            location.href="main.php";
         }
         </script>
         <?php
-
-        $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
-        if($charge)
+        if($total<0) // 잔액 없을 때
         {
-            echo $idnum," 계좌에 ",$amount,"원 만큼 충전하여 현재 잔액은 ",$total,"원입니다";
-            echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+            echo "<br><button onclick=\"location.href='main.php'\"> 잔액 부족, 돌아가기 </button>";
         }
-        else
-            echo "<br><button onclick=\"location.href='main.php'\"> 충전 실패, 돌아가기 </button>";
+        else // 잔액 충분할 때
+        {
+            $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
+            if($charge)
+            {
+                echo $idnum," 계좌에서 ",$amount,"원 만큼 결제되었습니다.";
+                echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+            }
+            else
+                echo "<br><button onclick=\"location.href='main.php'\"> 결재  실패, 돌아가기 </button>";
+        }
     }
-    else
+    else //계좌가 검색되지 않을 때
     {
         echo "등록되지 않은 학생증입니다.";
         echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
