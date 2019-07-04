@@ -53,7 +53,7 @@
         <script>
         var con_test = confirm("<?php echo $idnum," 고객에게 ",$price,"원 만큼 결제합니다"?>.");
         if(con_test == false){
-            location.replace="main.php";
+            location.replace("main.php");
         }
         </script>
         <?php
