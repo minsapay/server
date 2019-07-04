@@ -35,14 +35,6 @@
 
     $price=$_POST['price'];
     $rfid = $_POST['rfid'];
-
-    ?>
-
-<script type= "text/javascript">
-        var con_test = confirm("<?php echo $idnum," 고객에게 ",$price,"원 만큼 결제합니다"?>.");
-        if(con_test == true)
-        {
-            <?php
     //먼저 해당 rfid가 가입되어 있는지 검사
     $check="SELECT *from account_info WHERE rfid='$rfid'";
     $result=$mysqli->query($check);
@@ -81,7 +73,3 @@
     }
 
 ?>
-        }
-        else
-            location.replace("charge.php");
-    </script>
