@@ -26,5 +26,6 @@
     $amount=$_POST['amount'];
     $rfid = $_POST['rfid'];
 
+    //먼저 해당 rfid가 가입되어 있는지 검사
 
 ?>

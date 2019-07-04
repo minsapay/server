@@ -38,22 +38,21 @@
             <h3>Add account (행정위 전용 페이지)</h3>
     <form action = "add_account_check.php" method="POST">
         다음을 순서대로 입력
-        <div>
+        <div style="border:1px solid; padding:10px;">
             <label for="id"> 학번 입력 (선생님일 경우 주민번호 앞 6자리) </label>
             <input type="number" name="id" min="160000" max="999999" required>
         </div>
-        <div>
+        <div style="border:1px solid; padding:10px;">
             <label for="freepass"> 문기부 FREEPASS? </label>
             <input type="checkbox" name="freepass" value="yes"/>
         </div>
-        <div>
-            <label for="info"> 초기 충전 금액 </label><br>
+        <div style="border:1px solid; padding:10px;">
             <input type="radio" name="info" value="normal" required>일반인 (0원)
             <input type="radio" name="info" value="senior">3학년 (7000원 기본 충전)
             <input type="radio" name="info" value="teacher">선생님 (10000원 기본 충전)
         </div>
         
-        <div>
+        <div style="border:1px solid; padding:10px;">
             <label for="rfid"> RFID 등록 (리더기로 찍기) </label>
             <input type="number" name="rfid", required/>
         </div>
