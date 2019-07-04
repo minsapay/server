@@ -53,7 +53,7 @@
     if($result->num_rows==1)
     {
         echo "이미 등록된 학생증입니다.";
-        echo "<br><button onclick=\"location.href='add_account.php'\"> 돌아가기 </button>";
+        echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         exit();
     }
     $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')");
@@ -62,11 +62,11 @@
         ?>
         <meta charset="utf-8" />
         <script type="text/javascript">alert('계좌 등록이 완료되었습니다.');</script>
-        <meta http-equiv="refresh" content="0 url=/main.php">
+        <meta http-equiv="refresh" content="0;url=/main.php">
         <?php
     }
     else
- echo "<br><button onclick=\"location.href='add_account.html'\"> 계좌 등록 실패, 돌아가기 </button>";
+        echo "<br><button onclick=\"location.href='main.php'\"> 계좌 등록 실패, 돌아가기 </button>";
  
     
 ?>

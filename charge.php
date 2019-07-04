@@ -26,6 +26,8 @@
 <!DOCTYPE html>
     <html>
         <head>
+             <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
             <meta charset="utf-8">
 	        <title>Charge</title>
         </head>
@@ -35,11 +37,11 @@
     <form action = "charge_check.php" method="POST">
         <div>
             <label for="amount"> 충전할 금액 (원) </label>
-            <input type="number" name="amount">
+            <input type="number" name="amount" required>
         </div>
         <div>
             <label for="rfid"> RFID 등록 (리더기로 찍기) </label>
-            <input type="number" name="rfid"/>
+            <input type="number" name="rfid" required>
         </div>
         <div class="button">
             <input type="submit" value="submit">

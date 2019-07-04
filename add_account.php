@@ -34,35 +34,35 @@
             <title>Add Account</title>
         </head>
         <body>
-            <h1><a href="index.php">민사페이</a></h1>
-            <h3>Add account (행정위 전용 페이지)</h3>
-    <form action = "add_account_check.php" method="POST">
-        다음을 순서대로 입력
-        <div style="border:1px solid; padding:10px;">
-            <label for="id"> 학번 입력 (선생님일 경우 주민번호 앞 6자리) </label>
-            <input type="number" name="id" min="160000" max="999999" required>
-        </div>
-        <div style="border:1px solid; padding:10px;">
-            <label for="freepass"> 문기부 FREEPASS? </label>
-            <input type="checkbox" name="freepass" value="yes"/>
-        </div>
-        <div style="border:1px solid; padding:10px;">
-            <label for="one"><input type="radio" name="info" id="one" value="normal" required>일반인 (0원)</label>
-            <label for="one"><input type="radio" name="info" id="two"  value="senior">3학년 (7000원 기본 충전)</label>
-            <label for="one"><input type="radio" name="info"  id="three" value="teacher">선생님 (10000원 기본 충전)</label>
-        </div>
-        
-        <div style="border:1px solid; padding:10px;">
-            <label for="rfid"> RFID 등록 (리더기로 찍기) </label>
-            <input type="number" name="rfid", required/>
-        </div>
-        <div class="button">
-            <input type="submit" value="submit">
-        </div>
-    </form>
-</body>
-<hr>
-<blockquote>
-    Copyright 2019. Dotnet. all rights reserved
-</blockquote>
+        <h1><a href="index.php">민사페이</a></h1>
+        <h3>Add account (행정위 전용 페이지)</h3>
+        <form action = "add_account_check.php" method="POST">
+            다음을 순서대로 입력
+            <div style="border:1px solid; padding:10px;">
+                <label for="id"> 학번 입력 (선생님일 경우 주민번호 앞 6자리) </label>
+                <input type="number" name="id" min="160000" max="999999" required>
+            </div>
+            <div style="border:1px solid; padding:10px;">
+                <label for="freepass"> 문기부 FREEPASS? </label>
+                <input type="checkbox" name="freepass" value="yes"/>
+            </div>
+            <div style="border:1px solid; padding:10px;">
+                <label for="one"><input type="radio" name="info" id="one" value="normal" required>일반인 (0원)</label>
+                <label for="one"><input type="radio" name="info" id="two"  value="senior">3학년 (7000원 기본 충전)</label>
+                <label for="one"><input type="radio" name="info"  id="three" value="teacher">선생님 (10000원 기본 충전)</label>
+            </div>
+            
+            <div style="border:1px solid; padding:10px;">
+                <label for="rfid"> RFID 등록 (리더기로 찍기) </label>
+                <input type="number" name="rfid", required/>
+            </div>
+            <div class="button">
+                <input type="submit" value="submit">
+            </div>
+        </form>
+    </body>
+    <hr>
+    <blockquote>
+        Copyright 2019. Dotnet. all rights reserved
+    </blockquote>
 </html> 
