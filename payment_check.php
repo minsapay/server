@@ -60,7 +60,7 @@
         if($total<0) // 잔액 없을 때
         {
             echo "잔액이 부족합니다.";
-            echo "<br><button class = "button2" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+            echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         }
         else // 잔액 충분할 때
         {
@@ -68,7 +68,7 @@
             if($charge)
             {
                 echo $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
-                echo "<br><button class = "button2" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             }
             else
                 echo "결제에 실패했습니다.";
