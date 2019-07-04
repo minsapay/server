@@ -34,7 +34,7 @@
             <title>Add Account</title>
         </head>
         <body>
-            <h1><a href="index.php">MinsaPay</a></h1>
+            <h1><a href="index.php">민사페이</a></h1>
             <h3>Add account (행정위 전용 페이지)</h3>
     <form action = "add_account_check.php" method="POST">
         다음을 순서대로 입력
