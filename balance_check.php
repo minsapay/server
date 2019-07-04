@@ -11,7 +11,7 @@
             <?php
                 $id = $_POST["studentid"];
                 require('db.php');
-                $check="SELECT * FROM account_info WHERE idnumber='$id'";
+                $check="SELECT * FROM account_info WHERE idnumber='$id' OR rfid='$id'";
                 $result=$mysqli->query($check); 
                 $row=$result->fetch_array(MYSQLI_ASSOC);
                 $balance = $row['balance'];

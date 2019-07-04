@@ -25,6 +25,6 @@
 
     $amount=$_POST['amount'];
     $rfid = $_POST['rfid'];
-    
+
 
 ?>
