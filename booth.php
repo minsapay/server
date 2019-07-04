@@ -39,4 +39,5 @@
             echo "<h4> 현재 로그인 된 부스</h4>";
             echo "<h3>",$boothname, "</h3>";
             echo "<br>";
+        ?>
         

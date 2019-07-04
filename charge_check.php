@@ -26,6 +26,7 @@
     $amount=$_POST['amount'];
     $rfid = $_POST['rfid'];
 
+
     //먼저 해당 rfid가 가입되어 있는지 검사
     $check="SELECT *from account_info WHERE rfid='$rfid'";
     $result=$mysqli->query($check);
@@ -38,6 +39,14 @@
         $idnum = $row2['idnumber'];
         $money=$row2['balance'];
         $total = $money + $amount;
+        ?>
+        <script>
+        var con_test = confirm("<?php echo $idnum," 계좌에 ",$amount,"원 만큼 충전하겠습니까?"?>.");
+        if(con_test == false){
+            location.href="charge.php";
+        }
+        </script>
+        <?php
 
         $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
         if($charge)
