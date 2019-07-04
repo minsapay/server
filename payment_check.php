@@ -17,13 +17,13 @@
     $boothname = $row['boothname'];
     $isAdmin = $row['admin'];
 
-    //일반 부스 운영자가 들어왔을 때: 자기 위치로 이동
-    if(!$isAdmin)
+    //행정위 관리자가 들어왔을 때: 자기 위치로 이동
+    if($isAdmin)
     {
         header ('Location: ./main.php');
     }
 
-    $amount=$_POST['amount'];
+    $price=$_POST['price'];
     $rfid = $_POST['rfid'];
 
 
@@ -49,7 +49,6 @@
         <?php
 
         $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
-        unset($_POST);
         if($charge)
         {
             echo $idnum," 계좌에 ",$amount,"원 만큼 충전하여 현재 잔액은 ",$total,"원입니다";
