@@ -26,43 +26,43 @@
     $amount=$_POST['amount'];
     $rfid = $_POST['rfid'];
 
+    ?>
 
-    //먼저 해당 rfid가 가입되어 있는지 검사
-    $check="SELECT *from account_info WHERE rfid='$rfid'";
-    $result=$mysqli->query($check);
-    if($result->num_rows==1)
-    {
-        //한 개 계정이 검출
-        $current="SELECT * FROM account_info WHERE rfid='$rfid'";
-        $result2=$mysqli->query($current); 
-        $row2=$result2->fetch_array(MYSQLI_ASSOC);
-        $idnum = $row2['idnumber'];
-        $money=$row2['balance'];
-        $total = $money + $amount;
-        ?>
-        <script>
-        var con_test = confirm("<?php echo $idnum," 계좌에 ",$amount,"원 만큼 충전하겠습니까?"?>.");
-        if(con_test == false){
-            location.replace("main.php");
-        }
-        </script>
-        <?php
-
-        $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
-        unset($_POST);
-        if($charge)
+<script>
+        var con_test = confirm("<?php echo $idnum," 고객에게 ",$price,"원 만큼 결제합니다"?>.");
+        if(con_test == true)
         {
-            echo $idnum," 계좌에 ",$amount,"원 만큼 충전하여 현재 잔액은 ",$total,"원입니다";
-            echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+            <?php
+            //먼저 해당 rfid가 가입되어 있는지 검사
+            $check="SELECT *from account_info WHERE rfid='$rfid'";
+            $result=$mysqli->query($check);
+            if($result->num_rows==1)
+            {
+                //한 개 계정이 검출
+                $current="SELECT * FROM account_info WHERE rfid='$rfid'";
+                $result2=$mysqli->query($current); 
+                $row2=$result2->fetch_array(MYSQLI_ASSOC);
+                $idnum = $row2['idnumber'];
+                $money=$row2['balance'];
+                $total = $money + $amount;
+
+                $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
+                unset($_POST);
+                if($charge)
+                {
+                    echo $idnum," 계좌에 ",$amount,"원 만큼 충전하여 현재 잔액은 ",$total,"원입니다";
+                    echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                }
+                else
+                    echo "<br><button onclick=\"location.href='main.php'\"> 충전 실패, 돌아가기 </button>";
+            }
+            else
+            {
+                echo "등록되지 않은 학생증입니다.";
+                echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                exit();
+            }
+            ?>
         }
         else
-            echo "<br><button onclick=\"location.href='main.php'\"> 충전 실패, 돌아가기 </button>";
-    }
-    else
-    {
-        echo "등록되지 않은 학생증입니다.";
-        echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
-        exit();
-    }
-
-?>
+            location.replace("charge.php");
