@@ -46,17 +46,10 @@
             {
                 ?>
                  <form action = "payment_check.php" method="POST">
-                    <div>
-                        <label for="price"> 결제할 금액 (원) </label>
-                        <input type="number" name="price" min ="0" required>
-                    </div>
-                    <div>
-                        <label for="rfid"> RFID (리더기로 찍기) </label>
-                        <input type="number" name="rfid" required>
-                    </div>
-
+                    <input type="number" placeholder = "결제할 금액을 입력해주세요 (₩)" name="price" min ="0" required>
+                    <input type="number" placeholder = "학생증 RFID를 찍어주세요" name="rfid" required>
                     <div class="button">
-                        <input type="submit" value="결제하기">
+                        <button type="submit" class="button1">결제하기</button>
                     </div>
                 </form>
                 <?php
@@ -65,7 +58,7 @@
         <br>
         <button type="button" class = "button2" onclick="location.href='logout.php' ">로그아웃</button>
     </body> 
-    <blockquote>
-        Copyright 2019. Dotnet. all rights reserved
-    </blockquote>
+    <h6>
+        © 닷넷. 모든 권리 보유.
+    </h6>
 </html>

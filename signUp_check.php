@@ -15,7 +15,7 @@
     }
     if($id==NULL || $pw==NULL || $booth==NULL)
     {
-        echo "빈 칸을 모두 채워주세요";
+        echo "빈칸을 모두 채워주세요";
         echo "<button onclick=\"location.href='signUp.html'\"> 돌아가기 </button>";
         exit();
     }
@@ -26,7 +26,7 @@
     $result=$mysqli->query($check);
     if($result->num_rows==1)
     {
-        echo "중복된 id입니다.";
+        echo "중복된 아이디입니다.";
         echo "<button onclick=\"location.href='signUp.html'\"> 돌아가기 </button>";
         exit();
     }
@@ -42,5 +42,4 @@
     }
     else
         echo "<button onclick=\"location.href='signUp.html'\"> 회원가입 실패, 돌아가기 </button>";
-    
 ?>

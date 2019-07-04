@@ -50,7 +50,7 @@
     </form>
 </body>
 <hr>
-<blockquote>
-    Copyright 2019. Dotnet. all rights reserved
-</blockquote>
+    <h6>
+        © 닷넷. 모든 권리 보유.
+    </h6>
 </html> 

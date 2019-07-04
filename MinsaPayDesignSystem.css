@@ -1,10 +1,10 @@
 body {
 	margin: 0;
 	position: absolute;
-	top: 50%;
+	top: 10%;
 	left: 50%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
 }
 
 h1 {
@@ -47,13 +47,13 @@ input {
 }
 
 input {
-	border: none;
-	border-bottom: 1px solid black;
+	border: 1px solid gray;
     font-size:16px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-radius: 12px;
 }
 
 input[type=submit] {
@@ -95,7 +95,51 @@ button {
 }
 
 .button2 {
-	margin-top: 50px;
 	color: #B30D2B;
 	background-color: #eeeeee;
+}
+
+.clearinput {
+	border: 0px;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+}
+
+th {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+td {
+	border: 1px solid black;
+	padding: 10px;
+	text-align: left;
+}
+
+tr:first-child th:first-child {
+    border-radius: 10px 0 0 0;
+}
+tr:first-child td:last-child {
+    border-radius: 0 10px 0 0;
+}
+tr:last-child th:first-child {
+    border-radius: 0 0 0 10px;
+}
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+input[type=radio] {
+	width: 5%
+}
+
+.smallp {
+	text-align: left;
+	font-size: 12px;
+	color: gray;
+	margin-left: 10px;
+	display: inline-block;
 }
