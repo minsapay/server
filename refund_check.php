@@ -39,6 +39,7 @@
     if($result->num_rows==0)
     {
         echo "등록되지 않은 카드입니다.";
+        echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
     }
     else
     {
