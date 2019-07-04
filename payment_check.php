@@ -36,7 +36,13 @@
     $price=$_POST['price'];
     $rfid = $_POST['rfid'];
 
+    ?>
 
+<script type= "text/javascript">
+        var con_test = confirm("<?php echo $idnum," 고객에게 ",$price,"원 만큼 결제합니다"?>.");
+        if(con_test == true)
+        {
+            <?php
     //먼저 해당 rfid가 가입되어 있는지 검사
     $check="SELECT *from account_info WHERE rfid='$rfid'";
     $result=$mysqli->query($check);
@@ -49,14 +55,6 @@
         $idnum = $row2['idnumber'];
         $money=$row2['balance'];
         $total = $money - $price;
-        ?>
-        <script>
-        var con_test = confirm("<?php echo $idnum," 고객에게 ",$price,"원 만큼 결제합니다"?>.");
-        if(con_test == false){
-            location.replace("main.php");
-        }
-        </script>
-        <?php
         if($total<0) // 잔액 없을 때
         {
             echo "잔액이 부족합니다.";
@@ -83,3 +81,7 @@
     }
 
 ?>
+        }
+        else
+            location.replace("charge.php");
+    </script>
