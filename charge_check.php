@@ -66,3 +66,4 @@
         }
         else
             location.replace("charge.php");
+    </script>
