@@ -43,7 +43,7 @@
         <script>
         var con_test = confirm("<?php echo $idnum," 계좌에 ",$amount,"원 만큼 충전하겠습니까?"?>.");
         if(con_test == false){
-            location.href="charge.php";
+            location.replace="charge.php";
         }
         </script>
         <?php
