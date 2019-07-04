@@ -1,4 +1,11 @@
-<?php
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
+        <meta charset="utf-8">
+    </head>
+    <?php
     session_start();
 
     //세션이 존재하지 않을 때 == 로그인이 아직 안 되어 있을 때
@@ -43,15 +50,16 @@
                 if($charge)
                 {
                     echo $idnum," 계좌에 ",$amount,"원 만큼 충전하여 현재 잔액은 ",$total,"원입니다";
-                    echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                    echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
                 }
                 else
-                    echo "<br><button onclick=\"location.href='main.php'\"> 충전 실패, 돌아가기 </button>";
+                    echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 충전 실패, 돌아가기 </button>";
             }
             else
             {
                 echo "등록되지 않은 학생증입니다.";
-                echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
                 exit();
             }
             ?>
+</html>
