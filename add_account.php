@@ -47,9 +47,9 @@
             <input type="checkbox" name="freepass" value="yes"/>
         </div>
         <div style="border:1px solid; padding:10px;">
-            <input type="radio" id="info1" value="normal" required><label for="info1">일반인 (0원)</label> 
-            <input type="radio" id="info2" value="senior"><label for="info2">3학년 (7000원 기본 충전)</label> 
-            <input type="radio" id="info3" value="teacher"><label for="info3">선생님 (10000원 기본 충전)</label> 
+            <label for="one"><input type="radio" name="info" id="one" value="normal" required>일반인 (0원)</label>
+            <label for="one"><input type="radio" name="info" id="two"  value="senior">3학년 (7000원 기본 충전)</label>
+            <label for="one"><input type="radio" name="info"  id="three" value="teacher">선생님 (10000원 기본 충전)</label>
         </div>
         
         <div style="border:1px solid; padding:10px;">
