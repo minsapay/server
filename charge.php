@@ -32,7 +32,7 @@
 	        <title>Charge</title>
         </head>
         <body>
-            <h1><a href="index.php">MinsaPay</a></h1>
+            <h1><a href="index.php">민사페이</a></h1>
             <h3>계좌 충전 (행정위 전용 페이지)</h3>
     <form action = "charge_check.php" method="POST">
         <div>
@@ -40,7 +40,7 @@
             <input type="number" name="amount" required>
         </div>
         <div>
-            <label for="rfid"> RFID 등록 (리더기로 찍기) </label>
+            <label for="rfid"> RFID (리더기로 찍기) </label>
             <input type="number" name="rfid" required>
         </div>
         <div class="button">

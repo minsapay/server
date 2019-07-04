@@ -42,7 +42,7 @@
         $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
         if($charge)
         {
-            echo $idnum,"계좌에 ",$amount,"원 만큼 충전하여 현재 잔액은 ",$total,"원입니다";
+            echo $idnum," 계좌에 ",$amount,"원 만큼 충전하여 현재 잔액은 ",$total,"원입니다";
             echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         }
         else
