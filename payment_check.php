@@ -72,13 +72,13 @@
             }
             else
                 echo "결제에 실패했습니다.";
-                echo "<br><button class = "button2" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         }
     }
     else //계좌가 검색되지 않을 때
     {
         echo "등록되지 않은 학생증입니다.";
-        echo "<br><button class = "button2" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+        echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         exit();
     }
 
