@@ -15,7 +15,7 @@
             <button type="button" class = "button2" onclick="location.href='main.php' ">운영진 로그인</button>
         </body> 
 
-        <blockquote>
-            Copyright 2019. Dotnet. all rights reserved
-        </blockquote>
+    <h6>
+        © 닷넷. 모든 권리 보유.
+    </h6>
     </html>

@@ -46,13 +46,8 @@
             {
                 ?>
                  <form action = "payment_check.php" method="POST">
-                    <div>
-                        <input type="number" placeholder = "결제할 금액을 입력해주세요 (₩)" name="price" min ="0" required>
-                    </div>
-                    <div>
-                        <input type="number" placeholder = "학생증 RFID를 찍어주세요" name="rfid" required>
-                    </div>
-
+                    <input type="number" placeholder = "결제할 금액을 입력해주세요 (₩)" name="price" min ="0" required>
+                    <input type="number" placeholder = "학생증 RFID를 찍어주세요" name="rfid" required>
                     <div class="button">
                         <button type="submit" class="button1">결제하기</button>
                     </div>
@@ -63,7 +58,7 @@
         <br>
         <button type="button" class = "button2" onclick="location.href='logout.php' ">로그아웃</button>
     </body> 
-    <blockquote>
-        Copyright 2019. Dotnet. all rights reserved
-    </blockquote>
+    <h6>
+        © 닷넷. 모든 권리 보유.
+    </h6>
 </html>
