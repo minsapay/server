@@ -14,10 +14,17 @@
                 $check="SELECT * FROM account_info WHERE idnumber='$id' OR rfid='$id'";
                 $result=$mysqli->query($check); 
                 $row=$result->fetch_array(MYSQLI_ASSOC);
-                $balance = $row['balance'];
-                echo "당신의 잔액은 ";
-                echo "<h4>", $balance, "원</h4>";
-                echo"입니다.";
+                if($result->num_rows==0)
+                {
+                    echo "등록되지 않은 계좌입니다.";
+                }
+                else
+                {
+                    $balance = $row['balance'];
+                    echo "당신의 잔액은 ";
+                    echo "<h4>", $balance, "원</h4>";
+                    echo"입니다.";
+                }
             ?>
         </body> 
         <blockquote>

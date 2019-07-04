@@ -39,12 +39,26 @@
                 ?>
                     <button type="button" class = "button1" onclick="location.href='add_account.php' ">사용자 계좌 추가</button>
                     <button type="button" class = "button1" onclick="location.href='charge.php' ">계좌 충전 관리</button>
+                    <button type="button" class = "button1" onclick="location.href='refund.php' ">잔액 환불</button>
                 <?php
             }
             else
             {
                 ?>
-                    <button type="button" class = "button1" onclick="location.href='booth.php' ">부스 관리 콘솔로 이동</button>
+                 <form action = "payment_check.php" method="POST">
+                    <div>
+                        <label for="price"> 결재할 금액 (원) </label>
+                        <input type="number" name="price" required>
+                    </div>
+                    <div>
+                        <label for="rfid"> RFID (리더기로 찍기) </label>
+                        <input type="number" name="rfid" required>
+                    </div>
+
+                    <div class="button">
+                        <input type="submit" value="결재하기">
+                    </div>
+                </form>
                 <?php
             }
         ?>

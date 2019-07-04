@@ -45,7 +45,7 @@
         </div>
 
         <div class="button">
-            <input type="submit" value="submit">
+            <input type="submit" value="충전하기">
         </div>
     </form>
 </body>
