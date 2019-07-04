@@ -28,8 +28,10 @@
 <!DOCTYPE html>
     <html>
         <head>
+            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
             <meta charset="utf-8">
-	        <title>Add Account</title>
+            <title>Add Account</title>
         </head>
         <body>
             <h1><a href="index.php">MinsaPay</a></h1>
