@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
+        <meta charset="utf-8">
+        <title>민사페이</title>
+    </head>
+</html>
+
 <?php
     session_start();
 
@@ -49,7 +59,8 @@
         <?php
         if($total<0) // 잔액 없을 때
         {
-            echo "<br><button onclick=\"location.href='main.php'\"> 잔액 부족, 돌아가기 </button>";
+            echo "잔액이 부족합니다.";
+            echo "<br><button class = "button2" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         }
         else // 잔액 충분할 때
         {
@@ -57,16 +68,17 @@
             if($charge)
             {
                 echo $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
-                echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                echo "<br><button class = "button2" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             }
             else
-                echo "<br><button onclick=\"location.href='main.php'\"> 결재  실패, 돌아가기 </button>";
+                echo "결제에 실패했습니다.";
+                echo "<br><button class = "button2" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         }
     }
     else //계좌가 검색되지 않을 때
     {
         echo "등록되지 않은 학생증입니다.";
-        echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+        echo "<br><button class = "button2" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         exit();
     }
 

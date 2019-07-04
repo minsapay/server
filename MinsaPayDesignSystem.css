@@ -1,10 +1,10 @@
 body {
 	margin: 0;
 	position: absolute;
-	top: 50%;
+	top: 10%;
 	left: 50%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
 }
 
 h1 {
@@ -47,13 +47,13 @@ input {
 }
 
 input {
-	border: none;
-	border-bottom: 1px solid black;
+	border: 1px solid gray;
     font-size:16px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-radius: 12px;
 }
 
 input[type=submit] {
@@ -95,7 +95,6 @@ button {
 }
 
 .button2 {
-	margin-top: 50px;
 	color: #B30D2B;
 	background-color: #eeeeee;
 }
