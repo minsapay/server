@@ -41,7 +41,7 @@
         $total = $money - $price;
         ?>
         <script>
-        var con_test = confirm("<?php echo $idnum," 고객에게 ",$amount,"원 만큼 결제합니다"?>.");
+        var con_test = confirm("<?php echo $idnum," 고객에게 ",$price,"원 만큼 결제합니다"?>.");
         if(con_test == false){
             location.href="main.php";
         }
@@ -56,7 +56,7 @@
             $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
             if($charge)
             {
-                echo $idnum," 계좌에서 ",$amount,"원 만큼 결제되었습니다.";
+                echo $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
                 echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             }
             else
