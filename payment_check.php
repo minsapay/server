@@ -61,8 +61,10 @@
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             }
             else
+            {
                 echo "결제에 실패했습니다.";
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+            }
         }
     }
     else //계좌가 검색되지 않을 때
