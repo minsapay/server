@@ -35,7 +35,7 @@
         </head>
         <body>
         <h1><a href="index.php">민사페이</a></h1>
-        <h3>Add account (행정위 전용 페이지)</h3>
+        <h3>계좌 등록 (행정위 전용 페이지)</h3>
         <form action = "add_account_check.php" method="POST">
             다음을 순서대로 입력
             <div style="border:1px solid; padding:10px;">
