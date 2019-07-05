@@ -17,7 +17,7 @@
         <title>민사페이</title>
     </head>
     <body>
-        <<script language="javascript" type="text/javascript" src="include/header.js"></script>
+        <script language="javascript" type="text/javascript" src="include/header.js"></script>
         <h4>부스 운영진 · 민족제 운영진만 접속할 수 있습니다.</h4>
         <?php
             $id = $_SESSION['userid'];
