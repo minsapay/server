@@ -75,14 +75,14 @@
             <tr>
                 <td colspan="3">
                     <label>
-                        <input type="radio" checked="checked" name="info" id="two"  value="senior">
+                        <input type="radio"  name="info" id="two"  value="senior">
                         3학년 재학생 <p class = "smallp">잔금 7,000원으로 계좌가 개설됩니다.</p>
                     </label>
                 </td>
             </tr>
             <tr>
                 <td colspan="3">
-                        <input type="radio" checked="checked" name="info" id="three" value="teacher">
+                        <input type="radio"  name="info" id="three" value="teacher">
                         선생님 <p class = "smallp">잔금 10,000원으로 계좌가 개설됩니다.</p>
                     </label>
                 </td>

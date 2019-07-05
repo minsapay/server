@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
+        <meta charset="utf-8">
+        <title>민사페이</title>
+    </head>
+</html>
 <?php
     session_start();
 
