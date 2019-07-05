@@ -31,51 +31,53 @@
     {
         header ('Location: ./main.php');
     }
-
-    // 행정위 직원이 들어왔을 때(정상적인 상황)
-    $numid=$_POST['id'];
-    if (isset($_POST['freepass']) && $_POST['freepass'] == 'yes') 
-        $freepass=1;
     else
-        $freepass=0;
-    switch($_POST['info'])
     {
-        case "senior":
-            $balance=7000;
-            break;
-        case "teacher":
-            $balance=10000;
-            break;
-        default:
-            $balance=0;
-    }
-    $rfid=$_POST['rfid'];
+        // 행정위 직원이 들어왔을 때(정상적인 상황)
+        $numid=$_POST['id'];
+        if (isset($_POST['freepass']) && $_POST['freepass'] == 'yes') 
+            $freepass=1;
+        else
+            $freepass=0;
+        switch($_POST['info'])
+        {
+            case "senior":
+                $balance=7000;
+                break;
+            case "teacher":
+                $balance=10000;
+                break;
+            default:
+                $balance=0;
+        }
+        $rfid=$_POST['rfid'];
 
-    if($numid==NULL ||  $rfid==NULL)
-    {
-        echo "빈 칸을 모두 채워주세요";
-        echo "<br><button onclick=\"location.href='add_account.php'\"> 돌아가기 </button>";
-        exit();
+        if($numid==NULL ||  $rfid==NULL)
+        {
+            echo "빈 칸을 모두 채워주세요";
+            echo "<br><button onclick=\"location.href='add_account.php'\"> 돌아가기 </button>";
+            exit();
+        }
+        $check="SELECT *from account_info WHERE rfid='$rfid'";
+        $result=$mysqli->query($check);
+        if($result->num_rows==1)
+        {
+            echo "이미 등록된 학생증입니다.";
+            echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+            exit();
+        }
+        $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')");
+        if($signup)
+        {
+            ?>
+            <meta charset="utf-8" />
+            <script type="text/javascript">alert('계좌 등록이 완료되었습니다.');</script>
+            <meta http-equiv="refresh" content="0;url=/main.php">
+            <?php
+        }
+        else
+            echo "<br><button onclick=\"location.href='main.php'\"> 계좌 등록 실패, 돌아가기 </button>";
     }
-    $check="SELECT *from account_info WHERE rfid='$rfid'";
-    $result=$mysqli->query($check);
-    if($result->num_rows==1)
-    {
-        echo "이미 등록된 학생증입니다.";
-        echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
-        exit();
-    }
-    $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')");
-    if($signup)
-    {
-        ?>
-        <meta charset="utf-8" />
-        <script type="text/javascript">alert('계좌 등록이 완료되었습니다.');</script>
-        <meta http-equiv="refresh" content="0;url=/main.php">
-        <?php
-    }
-    else
-        echo "<br><button onclick=\"location.href='main.php'\"> 계좌 등록 실패, 돌아가기 </button>";
  
     
 ?>

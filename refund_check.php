@@ -31,29 +31,32 @@
     {
         header ('Location: ./main.php');
     }
-    $rfid = $_POST["rfid"];
-    $check="SELECT * FROM account_info WHERE rfid='$rfid'";
-    $result=$mysqli->query($check); 
-    $row=$result->fetch_array(MYSQLI_ASSOC);
-
-    if($result->num_rows==0)
-    {
-        echo "등록되지 않은 카드입니다.";
-        echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
-    }
     else
     {
-        $balance = $row['balance'];
-        $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='0' WHERE rfid='$rfid'");
-        if($charge)
+        $rfid = $_POST["rfid"];
+        $check="SELECT * FROM account_info WHERE rfid='$rfid'";
+        $result=$mysqli->query($check); 
+        $row=$result->fetch_array(MYSQLI_ASSOC);
+
+        if($result->num_rows==0)
         {
-            echo $idnum," 계좌에 남은 잔액", $balance, "원은 전부 환불 처리되었습니다.";
+            echo "등록되지 않은 카드입니다.";
             echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         }
         else
         {
-            echo "환불에 실패했습니다.";
-            echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+            $balance = $row['balance'];
+            $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='0' WHERE rfid='$rfid'");
+            if($charge)
+            {
+                echo $idnum," 계좌에 남은 잔액", $balance, "원은 전부 환불 처리되었습니다.";
+                echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+            }
+            else
+            {
+                echo "환불에 실패했습니다.";
+                echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+            }
         }
     }
 ?>

@@ -22,6 +22,8 @@
     {
         header ('Location: ./main.php');
     }
+    else
+    {
 ?>
 <!DOCTYPE html>
     <html>
@@ -54,3 +56,6 @@
         © 닷넷. 모든 권리 보유.
     </h6>
 </html> 
+<?php
+}
+?>
