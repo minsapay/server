@@ -37,7 +37,7 @@
         </head>
         <body>
         <h1><a href="index.php">민사페이</a></h1>
-        <h3>계좌 개설하기 · 행정위원회</h3>
+        <h3>계좌 개설 · 행정위원회</h3>
         <form action = "add_account_check.php" method="POST">
             <table cellspacing="0">
               <tr>

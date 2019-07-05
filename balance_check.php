@@ -2,8 +2,7 @@
     <html>
         <head>
             <meta charset="utf-8">
-	        <title>잔액 확인하기</title>
-            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	        <title>민사페이 계좌 잔액 확인</title>
             <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
         </head>
         <body>

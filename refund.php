@@ -28,7 +28,6 @@
         <!DOCTYPE html>
             <html>
                 <head>
-                    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
                     <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
                     <meta charset="utf-8">
                     <title>민사페이</title>
@@ -37,7 +36,7 @@
                     <h1><a href="index.php">민사페이</a></h1>
                     <h3>잔액 환불 (행정위 전용 페이지)</h3>
                     <form method="POST" id="refund" action="refund_check.php" autocomplete="off" >
-                        <input type="number" name="rfid" placeholder = "RFID를 입력해주세요" value="RFID number"> <br>
+                        <input type="number" name="rfid" placeholder = "RFID를 태그해주세요." value="RFID number"> <br>
                     </form>
                     <button type="submit" class = "button1" form="refund" value="잔액 환불">잔액 환불</button>
                 </body> 

@@ -28,14 +28,13 @@
 <!DOCTYPE html>
     <html>
         <head>
-             <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
             <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
             <meta charset="utf-8">
-	        <title>Charge</title>
+	        <title>민사 페이 계좌 충전</title>
         </head>
         <body>
             <h1><a href="index.php">민사페이</a></h1>
-            <h3>계좌 충전 (행정위 전용 페이지)</h3>
+            <h3>계좌 충전 · 행정위원회</h3>
     <form action = "charge_check.php" method="POST">
         <div>
             <label for="amount"> 충전할 금액 (원) </label>
