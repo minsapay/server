@@ -27,7 +27,7 @@
     $isAdmin = $row['admin'];
 
     //일반 부스 운영자가 들어왔을 때: 자기 위치로 이동
-    if(!$isAdmin != 1)
+    if($isAdmin != 1)
     {
         header ('Location: ./main.php');
     }
