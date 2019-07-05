@@ -42,13 +42,11 @@ h6 {
 
 input {
 	width: 100%;
-}
-
-input {
 	font-size: 16px;
 	border: 0px;
 	border-bottom: 1px solid black;
 	border-radius: 0px;
+	padding: 0px;
 }
 
 input[type=submit] {
