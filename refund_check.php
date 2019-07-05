@@ -2,6 +2,7 @@
     <html>
     <head>
         <script language="javascript" type="text/javascript" src="include/head.js"></script>
+        <meta charset="utf-8">
         <title>민사페이 환불 확인</title>
     </head>
 </html>

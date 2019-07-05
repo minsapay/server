@@ -29,6 +29,7 @@
             <html>
                 <head>
                     <script language="javascript" type="text/javascript" src="include/head.js"></script>
+                    <meta charset="utf-8">
                     <title>민사페이</title>
                 </head>
                 <body>

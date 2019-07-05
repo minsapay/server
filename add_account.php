@@ -32,6 +32,7 @@
     <html>
         <head>
             <script language="javascript" type="text/javascript" src="include/head.js"></script>
+            <meta charset="utf-8">
             <title>민사페이 계좌 등록</title>
         </head>
         <body>
