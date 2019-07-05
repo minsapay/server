@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
-        <meta charset="utf-8">
+        <script language="javascript" type="text/javascript" src="include/head.js"></script>
         <title>민사페이 계좌 충전 확인</title>
     </head>
     <?php
