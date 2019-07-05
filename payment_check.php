@@ -50,7 +50,7 @@
             if($isAdmin == 3 && $row2['freepass'] == 1) // 프리패스 대상자가 문기부에서 결재
             {
                 $price = 0;
-                echo "문기부 프리패스 ", $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
+                echo "문기부 프리패스가 적용되어<br> ", $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             }
             else // 문기부에서 결재 안할때
