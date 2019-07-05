@@ -34,7 +34,7 @@
             echo "<h3>",$boothname, "</h3>";
             echo "<br>";
             $isAdmin = $row['admin'];
-            if($isAdmin)
+            if($isAdmin==1)
             {
                 ?>
                     <button type="button" class = "button1" onclick="location.href='add_account.php' ">사용자 계좌 추가</button>
@@ -42,7 +42,7 @@
                     <button type="button" class = "button1" onclick="location.href='refund.php' ">잔액 환불</button>
                 <?php
             }
-            else
+            else if ($isAdmin==2 || $isAdmin==3)
             {
                 ?>
                  <form action = "payment_check.php" method="POST">
@@ -53,6 +53,10 @@
                     </div>
                 </form>
                 <?php
+            }
+            else
+            {
+                echo "<h3>권한이 없습니다. 관리자에게 문의하세요.</h3>";
             }
         ?>
         <br>

@@ -27,8 +27,8 @@
     $boothname = $row['boothname'];
     $isAdmin = $row['admin'];
 
-    //행정위 관리자가 들어왔을 때: 자기 위치로 이동
-    if($isAdmin)
+    //무권한/행정위 관리자가 들어왔을 때: 자기 위치로 이동
+    if($isAdmin == 0 || $isAdmin == 1)
     {
         header ('Location: ./main.php');
     }
@@ -45,25 +45,35 @@
         $result2=$mysqli->query($current); 
         $row2=$result2->fetch_array(MYSQLI_ASSOC);
         $idnum = $row2['idnumber'];
-        $money=$row2['balance'];
-        $total = $money - $price;
-        if($total<0) // 잔액 없을 때
+
+        if($isAdmin == 3 && $row2['freepass'] == 1) // 프리패스 대상자가 문기부에서 결재
         {
-            echo "잔액이 부족합니다.";
+            $price = 0;
+            echo "문기부 프리패스 ", $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
             echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         }
-        else // 잔액 충분할 때
+        else // 문기부에서 결재 안할때
         {
-            $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
-            if($charge)
+            $money=$row2['balance'];
+            $total = $money - $price;
+            if($total<0) // 잔액 없을 때
             {
-                echo $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
+                echo "잔액이 부족합니다.";
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             }
-            else
+            else // 잔액 충분할 때
             {
-                echo "결제에 실패했습니다.";
-                echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
+                if($charge)
+                {
+                    echo $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
+                    echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                }
+                else
+                {
+                    echo "결제에 실패했습니다.";
+                    echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                }
             }
         }
     }
