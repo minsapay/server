@@ -31,15 +31,13 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
             <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
             <meta charset="utf-8">
-            <title>Add Account</title>
+            <title>민사페이 계좌 등록</title>
         </head>
         <body>
         <h1><a href="index.php">민사페이</a></h1>
-        <h3>계좌 개설하기</h3>
-        <h4>행정위원회만 접속할 수 있는 페이지입니다.</h4>
+        <h3>계좌 개설하기 · 행정위원회</h3>
         <form action = "add_account_check.php" method="POST">
             <table cellspacing="0">
               <tr>

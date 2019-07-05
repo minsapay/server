@@ -1,3 +1,31 @@
+* {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: -apple-system, system-ui, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	width: 800px;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: black;
+}
+
+@media screen and (orientation: portrait) {
+
+* {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: -apple-system, system-ui, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	width: 300px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: black;
+}
+
+}
+
 body {
 	margin: 0;
 	position: absolute;
@@ -27,19 +55,6 @@ h5 {
 h6 {
   color: #777777;
   font-size: 14px;
-}
-
-* {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font-family: 'Noto Sans KR', sans-serif;
-	width: 800px;
-	text-align: center;
-	left: 50%;
-	top: 50%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	color: black;
 }
 
 input {
