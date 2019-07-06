@@ -75,7 +75,7 @@
         {
             $transaction2 = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance,info) VALUES ('$numid','$id','1','$balance','teacher credit')");
         }
-        if($signup && $transaction)
+        if($signup && $transaction && $transaction2)
         {
             ?>
             <meta charset="utf-8" />
