@@ -1,1 +1,1 @@
- document.write('<a href="index.php"><img src="image/MinsaPayHeader.png"</a>');
+ document.write('<a href="index.php"><img src="image/MinsaPayHeader.png"></a>');
