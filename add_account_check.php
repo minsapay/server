@@ -67,10 +67,12 @@
             echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             exit();
         }
-        $query = "INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')";
-        $query .= "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id','0','$balance')";
-        $result3 = mysqli_multi_query($mysqli, $query);
-        if($result3)
+        $query1 = "INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')";
+        $result3 = $mysqli->query($query1);
+        $query2 = "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id','0','$balance')";
+        $result4 = $mysqli->query($query2);
+        
+        if($result3 && $result4)
         {
             ?>
             <meta charset="utf-8" />
