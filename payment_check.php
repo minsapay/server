@@ -47,34 +47,49 @@
             $result2=$mysqli->query($current); 
             $row2=$result2->fetch_array(MYSQLI_ASSOC);
             $idnum = $row2['idnumber'];
+            $money=$row2['balance'];
     
             if($isAdmin == 3 && $row2['freepass'] == 1) // 프리패스 대상자가 문기부에서 결재
             {
                 $price = 0;
-                echo "문기부 프리패스가 적용되어<br> ", $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
-                echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id','2','$money')");
+                if($trans)
+                {
+                    echo "문기부 프리패스가 적용되어<br> ", $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
+                    echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                    exit();
+                }
+                else
+                {
+                        echo "결제에 실패했습니다.";
+                        echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                        exit();
+                }
             }
             else // 문기부에서 결재 안할때
             {
-                $money=$row2['balance'];
                 $total = $money - $price;
                 if($total<0) // 잔액 없을 때
                 {
                     echo "잔액이 부족합니다.";
                     echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                    exit();
                 }
                 else // 잔액 충분할 때
                 {
                     $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
-                    if($charge)
+                    $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id','2','$total')");
+                    if($charge && $trans)
                     {
                         echo $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
                         echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                        exit();
                     }
                     else
                     {
                         echo "결제에 실패했습니다.";
                         echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                        exit();
                     }
                 }
             }

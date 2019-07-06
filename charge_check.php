@@ -49,11 +49,13 @@
             $total = $money + $amount;
 
             $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
+            $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id','1','$total')");
             unset($_POST);
-            if($charge)
+            if($charge && $transaction)
             {
                 echo $idnum," 계좌에 ",$amount,"원 만큼 충전하여 현재 잔액은 ",$total,"원입니다";
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+                exit();
             }
             else
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 충전 실패, 돌아가기 </button>";

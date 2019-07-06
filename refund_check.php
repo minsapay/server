@@ -48,7 +48,8 @@
         {
             $balance = $row['balance'];
             $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='0' WHERE rfid='$rfid'");
-            if($charge)
+            $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id','0','0')");
+            if($charge && $trans)
             {
                 echo $idnum," 계좌에 남은 잔액 ", $balance, "원은 전부 환불 처리되었습니다.";
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
