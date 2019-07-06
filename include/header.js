@@ -1,1 +1,1 @@
- document.write('<h1><a href="index.php">민사페이</a></h1>');
+ document.write('<a href="index.php"><img src="image/MinsaPayHeader.png"</a>');
