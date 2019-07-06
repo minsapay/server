@@ -48,10 +48,11 @@
             $money=$row2['balance'];
             $total = $money + $amount;
 
-            $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
-            $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',1,'$total')");
+            $query="UPDATE account_info SET balance='$total' WHERE rfid='$rfid'";
+            $query .= "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',1,'$total')";
+            $result3 = mysqli_multi_query($mysqli, $query);
             unset($_POST);
-            if($charge && $transaction)
+            if($result3)
             {
                 echo $idnum," 계좌에 ",$amount,"원 만큼 충전하여 현재 잔액은 ",$total,"원입니다";
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";

@@ -67,9 +67,10 @@
             echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             exit();
         }
-        $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')");
-        $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id',0,'$balance')");
-        if($signup && $transaction)
+        $query = "INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')";
+        $query .= "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id',0,'$balance')";
+        $result3 = mysqli_multi_query($mysqli, $query);
+        if($result3)
         {
             ?>
             <meta charset="utf-8" />
