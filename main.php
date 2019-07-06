@@ -12,14 +12,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
+        <script language="javascript" type="text/javascript" src="include/head.js"></script>
         <meta charset="utf-8">
         <title>민사페이</title>
     </head>
     <body>
-        <h1><a href="index.php">민사페이</a></h1>
-        <h4>각 부스 운영진 및 민족제 운영진만 접속할 수 있습니다.</h4>
+        <script language="javascript" type="text/javascript" src="include/header.js"></script>
+        <h4>부스 운영진 · 민족제 운영진만 접속할 수 있습니다.</h4>
         <?php
             $id = $_SESSION['userid'];
 
@@ -61,8 +60,6 @@
         ?>
         <br>
         <button type="button" class = "button2" onclick="location.href='logout.php' ">로그아웃</button>
+        <script language="javascript" type="text/javascript" src="include/footer.js"></script>
     </body> 
-    <h6>
-        © 닷넷. 모든 권리 보유.
-    </h6>
 </html>

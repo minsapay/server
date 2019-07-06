@@ -28,33 +28,28 @@
 <!DOCTYPE html>
     <html>
         <head>
-             <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
+            <script language="javascript" type="text/javascript" src="include/head.js"></script>
             <meta charset="utf-8">
-	        <title>Charge</title>
+	        <title>민사 페이 계좌 충전</title>
         </head>
         <body>
-            <h1><a href="index.php">민사페이</a></h1>
-            <h3>계좌 충전 (행정위 전용 페이지)</h3>
-    <form action = "charge_check.php" method="POST">
-        <div>
-            <label for="amount"> 충전할 금액 (원) </label>
-            <input type="number" name="amount" min="0" required>
-        </div>
-        <div>
-            <label for="rfid"> RFID (리더기로 찍기) </label>
-            <input type="number" name="rfid" required>
-        </div>
-
-        <div class="button">
-            <input type="submit" value="충전하기">
+            <script language="javascript" type="text/javascript" src="include/header.js"></script>
+            <h3>계좌 충전 · 행정위원회</h3>
+            <form action = "charge_check.php" method="POST">
+                <div>
+                    <label for="amount"><h3 class="left">충전할 금액</h3></label>
+                    <input type="number" placeholder = "충전할 금액 입력하기 (₩)" name="amount" min="0" required>
+                </div>
+                <div>
+                    <label for="rfid"><h3 class="left">RFID</h3></label>
+                    <input type="number" placeholder = "RFID 인식하기" name="rfid" required>
+                </div>
+                <div class="button">
+                <button type="submit"  value="충전하기" class = "button1">계좌 충전하기</button>
         </div>
     </form>
+    <script language="javascript" type="text/javascript" src="include/footer.js"></script>
 </body>
-<hr>
-    <h6>
-        © 닷넷. 모든 권리 보유.
-    </h6>
 </html> 
 <?php
 }

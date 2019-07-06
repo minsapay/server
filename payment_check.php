@@ -1,10 +1,9 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
+        <script language="javascript" type="text/javascript" src="include/head.js"></script>
         <meta charset="utf-8">
-        <title>민사페이</title>
+        <title>민사페이 결제 확인</title>
     </head>
 </html>
 

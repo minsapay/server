@@ -1,10 +1,9 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
+        <script language="javascript" type="text/javascript" src="include/head.js"></script>
         <meta charset="utf-8">
-        <title>민사페이</title>
+        <title>민사페이 환불 확인</title>
     </head>
 </html>
 <?php
@@ -40,7 +39,7 @@
 
         if($result->num_rows==0)
         {
-            echo "등록되지 않은 카드입니다.";
+            echo "등록되지 않은 계좌입니다.";
             echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
         }
         else
@@ -49,7 +48,7 @@
             $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='0' WHERE rfid='$rfid'");
             if($charge)
             {
-                echo $idnum," 계좌에 남은 잔액", $balance, "원은 전부 환불 처리되었습니다.";
+                echo $idnum," 계좌에 남은 잔액 ", $balance, "원은 전부 환불 처리되었습니다.";
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             }
             else

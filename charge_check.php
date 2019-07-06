@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
+        <script language="javascript" type="text/javascript" src="include/head.js"></script>
         <meta charset="utf-8">
-        <title>민사페이</title>
+        <title>민사페이 계좌 충전 확인</title>
     </head>
     <?php
     session_start();

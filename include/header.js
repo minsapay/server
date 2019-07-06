@@ -1,0 +1,1 @@
+ document.write('<a href="https://www.minsapay.com/index.php"><h1>민사페이</h1></a>');

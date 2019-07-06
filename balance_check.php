@@ -1,13 +1,12 @@
 <!DOCTYPE html>
     <html>
         <head>
+            <script language="javascript" type="text/javascript" src="include/head.js"></script>
             <meta charset="utf-8">
-	        <title>잔액 확인하기</title>
-            <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="MinsaPayDesignSystem.css">
+	        <title>민사페이 계좌 잔액 확인</title>
         </head>
         <body>
-            <h1><a href="index.php">민사페이</a></h1>
+            <script language="javascript" type="text/javascript" src="include/header.js"></script>
             <?php
                 $id = $_POST["studentid"];
                 require('db.php');
@@ -26,8 +25,6 @@
                     echo"입니다.";
                 }
             ?>
-        </body> 
-    <h6>
-        © 닷넷. 모든 권리 보유.
-    </h6>
+            <script language="javascript" type="text/javascript" src="include/footer.js"></script>
+        </body>
     </html>
