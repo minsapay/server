@@ -67,11 +67,11 @@
         }
         $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')");
         $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id','0','0')");
-        if($balance == 7000)
+        if($_POST['info'] == "senior")
         {
             $transaction2 = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance,info) VALUES ('$numid','$id','1','$balance','senior credit')");
         }
-        else if($balance == 10000)
+        else if($_POST['info'] == "teacher")
         {
             $transaction2 = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance,info) VALUES ('$numid','$id','1','$balance','teacher credit')");
         }
