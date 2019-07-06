@@ -68,7 +68,7 @@
             exit();
         }
         $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')");
-        $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id','0','0')");
+        $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id',0,'$balance')");
         if($signup && $transaction)
         {
             ?>

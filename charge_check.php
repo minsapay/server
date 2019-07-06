@@ -49,7 +49,7 @@
             $total = $money + $amount;
 
             $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
-            $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id','1','$total')");
+            $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',1,'$total')");
             unset($_POST);
             if($charge && $transaction)
             {

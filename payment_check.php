@@ -52,7 +52,7 @@
             if($isAdmin == 3 && $row2['freepass'] == 1) // 프리패스 대상자가 문기부에서 결재
             {
                 $price = 0;
-                $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id','2','$money')");
+                $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',2,'$money')");
                 if($trans)
                 {
                     echo "문기부 프리패스가 적용되어<br> ", $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
@@ -78,7 +78,7 @@
                 else // 잔액 충분할 때
                 {
                     $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='$total' WHERE rfid='$rfid'");
-                    $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id','2','$total')");
+                    $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',2,'$total')");
                     if($charge && $trans)
                     {
                         echo $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";

@@ -47,8 +47,8 @@
         else
         {
             $balance = $row['balance'];
-            $charge=mysqli_query($mysqli,"UPDATE account_info SET balance='0' WHERE rfid='$rfid'");
-            $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id','0','0')");
+            $charge=mysqli_query($mysqli,"UPDATE account_info SET balance=0 WHERE rfid='$rfid'");
+            $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',0,0)");
             if($charge && $trans)
             {
                 echo $idnum," 계좌에 남은 잔액 ", $balance, "원은 전부 환불 처리되었습니다.";
