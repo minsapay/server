@@ -38,6 +38,7 @@
         $check="SELECT * FROM account_info WHERE rfid='$rfid'";
         $result=$mysqli->query($check); 
         $row=$result->fetch_array(MYSQLI_ASSOC);
+        $idnum = $row['idnumber'];
 
         if($result->num_rows==0)
         {
@@ -47,8 +48,8 @@
         else
         {
             $balance = $row['balance'];
-            $query = "UPDATE account_info SET balance=0 WHERE rfid='$rfid';";
-            $query ."INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',0,0)";
+            $query = "UPDATE account_info SET balance=0 WHERE rfid='$rfid'; ";
+            $query ."INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',3,0)";
     
             if (mysqli_multi_query($mysqli, $query))
             {

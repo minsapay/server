@@ -68,8 +68,8 @@
             exit();
         }
 
-        $query = "INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid');";
-        $query ."INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id','0','$balance')";
+        $query = "INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid'); ";
+        $query ."INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id',0,'$balance')";
 
         if (mysqli_multi_query($mysqli, $query))
         {

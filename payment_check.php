@@ -77,7 +77,7 @@
                 }
                 else // 잔액 충분할 때
                 {
-                    $query = "UPDATE account_info SET balance='$total' WHERE rfid='$rfid';";
+                    $query = "UPDATE account_info SET balance='$total' WHERE rfid='$rfid'; ";
                     $query .= "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',2,'$total')";
             
                     if (mysqli_multi_query($mysqli, $query))
