@@ -13,6 +13,7 @@
     if(!isset($_SESSION['userid'])) 
     {
         header ('Location: ./main.php');
+        exit();
     }
     //세션이 존재할 때 == 로그인이 되어 있을 때
     $id = $_SESSION['userid'];
@@ -29,6 +30,7 @@
     if($isAdmin != 1)
     {
         header ('Location: ./main.php');
+        exit();
     }
     else
     {

@@ -5,6 +5,7 @@
     if(!isset($_SESSION['userid'])) 
     {
         header ('Location: ./login.html');
+        exit();
     }
     
     //세션이 존재할 때 == 로그인이 되어 있을 때

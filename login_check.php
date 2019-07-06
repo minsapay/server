@@ -25,6 +25,7 @@
             {
                 //로그인 성공 시 페이지 이동
                 header('Location: ./main.php');   
+                exit();
             }
         }
     }

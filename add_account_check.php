@@ -13,6 +13,7 @@
     if(!isset($_SESSION['userid'])) 
     {
         header ('Location: ./main.php');
+        exit();
     }
     //세션이 존재할 때 == 로그인이 되어 있을 때
     $id = $_SESSION['userid'];
@@ -29,6 +30,7 @@
     if($isAdmin != 1)
     {
         header ('Location: ./main.php');
+        exit();
     }
     else
     {
@@ -67,15 +69,7 @@
         }
         $signup=mysqli_query($mysqli,"INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid')");
         $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id','0','0')");
-        if($_POST['info'] == "senior")
-        {
-            $transaction2 = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance,info) VALUES ('$numid','$id','1','$balance','senior_credit')");
-        }
-        else if($_POST['info'] == "teacher")
-        {
-            $transaction2 = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance,info) VALUES ('$numid','$id','1','$balance','teacher_credit')");
-        }
-        if($signup && $transaction && $transaction2)
+        if($signup && $transaction)
         {
             ?>
             <meta charset="utf-8" />
