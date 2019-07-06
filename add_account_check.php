@@ -69,11 +69,11 @@
         $transaction = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id','0','0')");
         if($_POST['info'] == "senior")
         {
-            $transaction2 = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance,info) VALUES ('$numid','$id','1','$balance','senior credit')");
+            $transaction2 = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance,info) VALUES ('$numid','$id','1','$balance','senior_credit')");
         }
         else if($_POST['info'] == "teacher")
         {
-            $transaction2 = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance,info) VALUES ('$numid','$id','1','$balance','teacher credit')");
+            $transaction2 = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance,info) VALUES ('$numid','$id','1','$balance','teacher_credit')");
         }
         if($signup && $transaction && $transaction2)
         {
