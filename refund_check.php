@@ -47,10 +47,10 @@
         else
         {
             $balance = $row['balance'];
-            $query = mysqli_query($mysqli,"UPDATE account_info SET balance=0 WHERE rfid='$rfid'");
-            $query .= "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',0,0)";
-            $result3 = mysqli_multi_query($mysqli, $query);
-            if($result3)
+            $query = "UPDATE account_info SET balance=0 WHERE rfid='$rfid';";
+            $query ."INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',0,0)";
+    
+            if (mysqli_multi_query($mysqli, $query))
             {
                 echo $idnum," 계좌에 남은 잔액 ", $balance, "원은 전부 환불 처리되었습니다.";
                 echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";

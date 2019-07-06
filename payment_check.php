@@ -77,10 +77,10 @@
                 }
                 else // 잔액 충분할 때
                 {
-                    $query = "UPDATE account_info SET balance='$total' WHERE rfid='$rfid'";
+                    $query = "UPDATE account_info SET balance='$total' WHERE rfid='$rfid';";
                     $query .= "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',2,'$total')";
-                    $result3 = mysqli_multi_query($mysqli, $query);
-                    if($result3)
+            
+                    if (mysqli_multi_query($mysqli, $query))
                     {
                         echo $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
                         echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
