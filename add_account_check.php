@@ -67,9 +67,9 @@
             echo "<br><button onclick=\"location.href='main.php'\"> 돌아가기 </button>";
             exit();
         }
-
+        $date =  date("m/d h:i:s",strtotime ("+9 hours"));
         $query = "INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid'); ";
-        $query .= "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$numid','$id',0,'$balance')";
+        $query .= "INSERT INTO transaction_list (who,booth,what,balance, timestamp) VALUES ('$numid','$id',0,'$balance','$date')";
 
         if (mysqli_multi_query($mysqli, $query))
         {

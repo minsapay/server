@@ -47,9 +47,10 @@
         }
         else
         {
+            $date = date("m/d h:i:s",strtotime ("+9 hours"));
             $balance = $row['balance'];
             $query = "UPDATE account_info SET balance=0 WHERE rfid='$rfid'; ";
-            $query .= "INSERT INTO transaction_list (who,booth,what,balance) VALUES ('$idnum','$id',3,0)";
+            $query .= "INSERT INTO transaction_list (who,booth,what,balance, timestamp) VALUES ('$idnum','$id',3,0,'$date')";
     
             if (mysqli_multi_query($mysqli, $query))
             {

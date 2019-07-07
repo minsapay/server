@@ -25,7 +25,6 @@
                 echo"입니다.";
                 if($row[freepass])
                     echo "<br><br>당신은 문기부 FREEPASS 대상자 입니다.";
-                echo date("m/d h:i:s",strtotime ("+9 hours"));
             ?>
             <br>
             <details>
