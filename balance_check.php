@@ -20,7 +20,7 @@
                 }
                 $balance = $row['balance'];
                 $id = $row['idnumber'];
-                echo $id,"의 잔액은 ";
+                echo $id," 의 잔액은 ";
                 echo "<h4>", $balance, "원</h4>";
                 echo"입니다.";
                 if($row[freepass])
@@ -48,6 +48,10 @@
                             $number++;
                             $time = $newrow['timestamp'];
                             $booth =  $newrow['booth'];
+                            $usercheck="SELECT * FROM user_info WHERE id='$booth'";
+                            $user=$mysqli->query($usercheck); 
+                            $userrow=$user->fetch_array(MYSQLI_ASSOC);
+                            $booth = $userrow['boothname'];
                             switch($newrow['what'])
                             {
                                 case 0:
