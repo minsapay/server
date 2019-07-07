@@ -32,6 +32,7 @@
                 <table>
                     <thead>
                     <tr>
+                    <th>번호</th>
                     <th>시간</th>
                     <th>부스명</th>
                     <th>분류</th>
@@ -40,9 +41,11 @@
                     </thead>
                     <?php
                         $result  = mysqli_query($mysqli,"SELECT * FROM transaction_list  WHERE who='$id';");
+                        $number=0;
                         echo("<tbody>");
                         while($newrow = mysqli_fetch_array( $result ) )
                         {
+                            $number++;
                             $time = $newrow['timestamp'];
                             $booth =  $newrow['booth'];
                             switch($newrow['what'])
@@ -64,6 +67,7 @@
                             }
                             $balance =  $newrow['balance'];
                             echo "<tr>";
+                            echo "<td>".$number."</td>";
                             echo "<td>".$time."</td>";
                             echo "<td>".$booth."</td>";
                             echo "<td>".$what."</td>";
