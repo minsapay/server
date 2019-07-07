@@ -45,7 +45,13 @@
             else if ($isAdmin==2 || $isAdmin==3)
             {
                 ?>
-                 <form action = "payment_check.php" method="POST">
+                <script>
+                function validate(form) {
+                        return confirm('<?=$price?>원을 결제하겠습니까?');
+                    }
+                }
+                </script>
+                 <form action = "payment_check.php" method="POST" onsubmit="return validate(this);">
                     <input type="number" placeholder = "결제할 금액을 입력해주세요 (₩)" name="price" min ="0" required>
                     <input type="number" placeholder = "학생증 RFID를 찍어주세요" name="rfid" required>
                     <div class="button">
