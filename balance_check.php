@@ -48,10 +48,6 @@
                             $number++;
                             $time = $newrow['timestamp'];
                             $booth =  $newrow['booth'];
-                            $usercheck="SELECT * FROM user_info WHERE id='$booth'";
-                            $user=$mysqli->query($usercheck); 
-                            $userrow=$user->fetch_array(MYSQLI_ASSOC);
-                            $booth = $userrow['boothname'];
                             switch($newrow['what'])
                             {
                                 case 0:
