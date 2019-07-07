@@ -38,7 +38,7 @@
                     </tr>
                     </thead>
                     <?php
-                        $result  = $mysqli->_query("SELECT * FROM transaction_list ORDER BY num asc WHERE who='$id';");
+                        $result  = mysqli_query($mysqli,"SELECT * FROM transaction_list  WHERE who='$id';");
                         echo("<tbody>");
                         while($newrow = mysqli_fetch_array( $result ) )
                         {
@@ -63,11 +63,17 @@
                                 $what = "오류";
                             }
                             $balance =  $newrow['balance'];
-                            echo("<tr><td>".$time."</td><td>".$who."</td><td>".$booth."</td><td>".$what."</td><td>".$balance."</td></tr>");
+                            echo "<tr>";
+                            echo "<td>".$time."</td>";
+                            echo "<td>".$who."</td>";
+                            echo "<td>".$booth."</td>";
+                            echo "<td>".$what."</td>";
+                            echo "<td>".$balance."</td>";
+                            echo "</tr>";
                         }
                         echo("</tbody>");
                     ?>
-                <table>
+                </table>
             <script language="javascript" type="text/javascript" src="include/footer.js"></script>
         </body>
     </html>
