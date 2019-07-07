@@ -37,7 +37,7 @@
         $rfid = $_POST['rfid'];
         ?>
         <script type="text/javascript">
-         var con_test = confirm("<?=$amount?>원을 충전하겠습니까?");
+         var con_test = confirm("<?php echo $amount; ?>원을 충전하겠습니까?");
         if(con_test == false){
         <?php
         echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
