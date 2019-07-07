@@ -28,8 +28,7 @@
             ?>
             <br><br>
             <details>
-            <summary>결제 기록 보기</summary>
-                <div id="myDIV">
+                <summary>결제 기록 보기</summary>
                     <?php
                         $query  = $mysqli->_query("SELECT * FROM transaction_list ORDER BY num asc WHERE who='$id';");
                         $result = $mysqli->_fetch($query);
@@ -71,8 +70,7 @@
                         }
                         echo("</tbody>");
                     ?>
-                </div>
-                    </details>
+                </details>
             <script language="javascript" type="text/javascript" src="include/footer.js"></script>
         </body>
     </html>
