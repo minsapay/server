@@ -27,31 +27,25 @@
                     echo "<br><br>당신은 문기부 FREEPASS 대상자 입니다.";
             ?>
             <br>
-            <details>
-                <summary>결제 기록 보기</summary>
+                <table>
+                    <thead>
+                    <tr>
+                    <th>시간</th>
+                    <th>계좌</th>
+                    <th>부스명</th>
+                    <th>분류</th>
+                    <th>잔액</th>
+                    </tr>
+                    </thead>
                     <?php
-                        $query  = $mysqli->_query("SELECT * FROM transaction_list ORDER BY num asc WHERE who='$id';");
-                        $result = $mysqli->_fetch($query);
-                        ?>
-                        <table>
-                        <thead>
-                        <tr>
-                        <th>시간</th>
-                        <th>계좌</th>
-                        <th>부스명</th>
-                        <th>분류</th>
-                        <th>잔액</th>
-                        </tr>
-                        </thead>
-                        <?php
+                        $result  = $mysqli->_query("SELECT * FROM transaction_list ORDER BY num asc WHERE who='$id';");
                         echo("<tbody>");
-                        for($i=0; $i<sizeof($result); $i++)
+                        while($newrow = mysqli_fetch_array( $result ) )
                         {
-                            $count++;
-                            $time = $result[$i]->timestamp;
-                            $who =  $result[$i]->who;
-                            $booth =  $result[$i]->booth;
-                            switch($result[$i]->what)
+                            $time = $newrow['time'];
+                            $who =  $newrow['who'];
+                            $booth =  $newrow['booth'];
+                            switch($newrow['what'])
                             {
                                 case 0:
                                 $what = "개설";
@@ -65,14 +59,15 @@
                                 case 3:
                                 $what = "반납";
                                 break;
+                                default:
+                                $what = "오류";
                             }
-                            $balance =  $result[$i]->balance;
+                            $balance =  $newrow['balance'];
                             echo("<tr><td>".$time."</td><td>".$who."</td><td>".$booth."</td><td>".$what."</td><td>".$balance."</td></tr>");
                         }
                         echo("</tbody>");
                     ?>
-                    <table>
-                </details>
+                <table>
             <script language="javascript" type="text/javascript" src="include/footer.js"></script>
         </body>
     </html>
