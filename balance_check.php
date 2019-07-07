@@ -26,13 +26,14 @@
                 if($row[freepass])
                     echo "<br><br>당신은 문기부 FREEPASS 대상자 입니다.";
             ?>
-            <br><br>
+            <br>
             <details>
                 <summary>결제 기록 보기</summary>
                     <?php
                         $query  = $mysqli->_query("SELECT * FROM transaction_list ORDER BY num asc WHERE who='$id';");
                         $result = $mysqli->_fetch($query);
                         ?>
+                        <table>
                         <thead>
                         <tr>
                         <th>시간</th>
@@ -70,6 +71,7 @@
                         }
                         echo("</tbody>");
                     ?>
+                    <table>
                 </details>
             <script language="javascript" type="text/javascript" src="include/footer.js"></script>
         </body>
