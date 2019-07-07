@@ -53,7 +53,7 @@
             {
                 $date = date("m/d h:i:s",strtotime ("+9 hours"));
                 $price = 0;
-                $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance, timestamp) VALUES ('$idnum','$id',2,'$money','$date')");
+                $trans = mysqli_query($mysqli, "INSERT INTO transaction_list (who,booth,what,balance, timestamp) VALUES ('$idnum','$boothname',2,'$money','$date')");
                 if($trans)
                 {
                     echo "문기부 프리패스가 적용되어<br> ", $idnum," 계좌에서 ",$price,"원 만큼 결제되었습니다.";
@@ -80,7 +80,7 @@
                 {
                     $date = date("m/d h:i:s",strtotime ("+9 hours"));
                     $query = "UPDATE account_info SET balance='$total' WHERE rfid='$rfid'; ";
-                    $query .= "INSERT INTO transaction_list (who,booth,what,balance, timestamp) VALUES ('$idnum','$id',2,'$total','$date')";
+                    $query .= "INSERT INTO transaction_list (who,booth,what,balance, timestamp) VALUES ('$idnum','$boothname',2,'$total','$date')";
             
                     if (mysqli_multi_query($mysqli, $query))
                     {
