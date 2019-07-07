@@ -69,7 +69,7 @@
         }
         $date =  date("m/d h:i:s",strtotime ("+9 hours"));
         $query = "INSERT INTO account_info (rfid,balance,freepass,idnumber) VALUES ('$rfid','$balance','$freepass','$numid'); ";
-        $query .= "INSERT INTO transaction_list (who,booth,what,balance, timestamp) VALUES ('$numid','$boothname',0,'$balance','$date')";
+        $query .= "INSERT INTO transaction_list (who,booth,what,balance, timestamp, price) VALUES ('$numid','$boothname',0,'$balance','$date','$balance')";
 
         if (mysqli_multi_query($mysqli, $query))
         {

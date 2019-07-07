@@ -52,6 +52,38 @@
                         <button type="submit" class="button1">결제하기</button>
                     </div>
                 </form>
+                <details>
+                <summary>결제 내역 보기</summary>
+                <table>
+                    <thead>
+                    <tr>
+                    <th>번호</th>
+                    <th>시간</th>
+                    <th>결제자</th>
+                    <th>판매액</th>
+                    </tr>
+                    </thead>
+                    <?php
+                        $result  = mysqli_query($mysqli,"SELECT * FROM transaction_list  WHERE booth='$boothname';");
+                        $number=0;
+                        echo("<tbody>");
+                        while($newrow = mysqli_fetch_array( $result ) )
+                        {
+                            $number++;
+                            $time = $newrow['timestamp'];
+                            $who =  $newrow['who'];
+                            $price =  $newrow['price'];
+                            echo "<tr>";
+                            echo "<td>".$number."</td>";
+                            echo "<td>".$time."</td>";
+                            echo "<td>".$who."</td>";
+                            echo "<td>".$price."</td>";
+                            echo "</tr>";
+                        }
+                        echo("</tbody>");
+                    ?>
+                </table>
+            </details>
                 <?php
             }
             else

@@ -50,7 +50,7 @@
             unset($_POST);
             $date =  date("m/d h:i:s",strtotime ("+9 hours"));
             $query = "UPDATE account_info SET balance='$total' WHERE rfid='$rfid'; ";
-            $query .= "INSERT INTO transaction_list (who,booth,what,balance, timestamp) VALUES ('$idnum','$boothname',1,'$total','$date')";
+            $query .= "INSERT INTO transaction_list (who,booth,what,balance, timestamp, price) VALUES ('$idnum','$boothname',1,'$total','$date','$amount')";
     
             if (mysqli_multi_query($mysqli, $query))
             {
