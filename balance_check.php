@@ -37,7 +37,8 @@
                 if($row[freepass])
                     echo "<br>당신은 문기부 FREEPASS 대상자 입니다.";
             ?>
-            <a href="javascript:doDisplay();">> 결제 기록 보기</a><br/><br/>
+            <script language="javascript" type="text/javascript">
+            <a href="javascript:doDisplay();"><br><br>결제 기록 보기</a>
             <div id="myDIV">
                 <?php
                     $query  = $mysqli->_query("SELECT * FROM transaction_list ORDER BY num asc WHERE who='$id';");
@@ -81,6 +82,7 @@
                     echo("</tbody>");
                 ?>
             </div>
+            </script>
             <script language="javascript" type="text/javascript" src="include/footer.js"></script>
         </body>
     </html>
