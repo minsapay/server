@@ -42,7 +42,7 @@
                         echo("<tbody>");
                         while($newrow = mysqli_fetch_array( $result ) )
                         {
-                            $time = $newrow['time'];
+                            $time = $newrow['timestamp'];
                             $who =  $newrow['who'];
                             $booth =  $newrow['booth'];
                             switch($newrow['what'])
