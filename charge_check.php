@@ -5,7 +5,9 @@
         <meta charset="utf-8">
         <title>민사페이 계좌 충전 확인</title>
     </head>
+    <body>
     <?php
+    
     session_start();
 
     //세션이 존재하지 않을 때 == 로그인이 아직 안 되어 있을 때
@@ -80,4 +82,5 @@
         }
     }
     ?>
+    </body>
 </html>
