@@ -37,6 +37,17 @@
     {
         $price=$_POST['price'];
         $rfid = $_POST['rfid'];
+        ?>
+        <script type="text/javascript">
+         var con_test = confirm("<?=$price?>원을 결제하겠습니까?");
+        if(con_test == false){
+        <?php
+        echo "<br><button class = \"button2\" onclick=\"location.href='main.php'\"> 돌아가기 </button>";
+        exit();
+        ?>
+        }
+        </script>
+        <?php
         //먼저 해당 rfid가 가입되어 있는지 검사
         $check="SELECT *from account_info WHERE rfid='$rfid'";
         $result=$mysqli->query($check);
