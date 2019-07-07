@@ -20,18 +20,20 @@
                 }
                 $balance = $row['balance'];
                 $id = $row['idnumber'];
-                echo "당신의 잔액은 ";
+                echo $id,"의 잔액은 ";
                 echo "<h4>", $balance, "원</h4>";
                 echo"입니다.";
                 if($row[freepass])
                     echo "<br><br>당신은 문기부 FREEPASS 대상자 입니다.";
+                echo date("m/d h:i:s");
             ?>
             <br>
+            <details>
+                <summary>결제 내역 보기</summary>
                 <table>
                     <thead>
                     <tr>
                     <th>시간</th>
-                    <th>계좌</th>
                     <th>부스명</th>
                     <th>분류</th>
                     <th>잔액</th>
@@ -43,7 +45,6 @@
                         while($newrow = mysqli_fetch_array( $result ) )
                         {
                             $time = $newrow['timestamp'];
-                            $who =  $newrow['who'];
                             $booth =  $newrow['booth'];
                             switch($newrow['what'])
                             {
@@ -65,7 +66,6 @@
                             $balance =  $newrow['balance'];
                             echo "<tr>";
                             echo "<td>".$time."</td>";
-                            echo "<td>".$who."</td>";
                             echo "<td>".$booth."</td>";
                             echo "<td>".$what."</td>";
                             echo "<td>".$balance."</td>";
@@ -74,6 +74,7 @@
                         echo("</tbody>");
                     ?>
                 </table>
+            </details>
             <script language="javascript" type="text/javascript" src="include/footer.js"></script>
         </body>
     </html>
