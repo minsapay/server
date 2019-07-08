@@ -11,8 +11,8 @@ Payment Server and Payment Web App for [KMLA](https://en.wikipedia.org/wiki/Kore
 |역할|담당|
 |----|----|
 |기획|민사고 금융정보부|
-|Back-End Dev + DB + Payment Logic|[안주언](https://github.com/JueonAn)|
-|Front-End Dev + Server (DNS) + Design|[조성현](https://github.com/anaclumos)|
+|Payment Logic + Back-End Dev|[안주언](https://github.com/JueonAn)|
+|UI/UX Design + Front-End Dev|[조성현](https://github.com/anaclumos)|
 |RFID 기술 자문|이승호|
 
 ## Tech Stacks
