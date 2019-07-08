@@ -1,6 +1,6 @@
 ![민사페이 헤더 이미지](image/MinsaPayHeader.png)
 
-# MinsaPay
+## MinsaPay
 
 민족제(민사고 여름 축제)를 위한 결제 서버와 웹 앱입니다.
 
@@ -18,6 +18,7 @@ Payment Server and Payment Web App for [KMLA](https://en.wikipedia.org/wiki/Kore
 ## Tech Stacks
 
 |Tech|Stacks|
+|----|----|
 |Server|Heroku + AWS Route 53|
 |Database|ClearDB + SQL|
 |Back-end Language|PHP|
