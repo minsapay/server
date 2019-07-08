@@ -1,1 +1,1 @@
-document.write('<h6>© 닷넷. 모든 권리 보유.</h6>');
+document.write('<h6><a href = "https://github.com/minsapay/server">© 닷넷. 모든 권리 보유.</a></h6>');
