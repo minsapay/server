@@ -1,4 +1,4 @@
-![민사페이 헤더 이미지](image/MinsaPayHeader.png)
+![민사페이 헤더 이미지](image/MinsaPayHeader@2x.png)
 
 ## MinsaPay
 
