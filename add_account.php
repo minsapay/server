@@ -95,7 +95,7 @@
                     <th><h3>RFID 태그</h3></th>
                 </tr>
                 <tr>
-                    <th><input type="number" placeholder="카드를 인식해주세요." name="rfid", required/></th>
+                    <th><input type="number" placeholder="RFID를 태그해주세요." name="rfid", required/></th>
                 </tr>
             </table>
             <button type="submit" class="button1">계좌 개설하기</button>

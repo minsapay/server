@@ -138,3 +138,8 @@ li {
 	text-align: left;
 	margin: 0px;
 }
+
+form {
+	padding: 0px;
+	margin: 0px;
+}

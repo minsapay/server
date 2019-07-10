@@ -37,7 +37,7 @@
             if($isAdmin==1)
             {
                 ?>
-                    <button type="button" class = "button1" onclick="location.href='add_account.php' ">사용자 계좌 추가</button>
+                    <button type="button" class = "button1" onclick="location.href='add_account.php' ">계좌 개설</button>
                     <button type="button" class = "button1" onclick="location.href='charge.php' ">계좌 충전 관리</button>
                     <button type="button" class = "button1" onclick="location.href='refund.php' ">잔액 환불</button>
                 <?php
@@ -47,8 +47,8 @@
                 ?>
 
                  <form action = "payment_check.php" method="POST" onsubmit="return validate(this);">
-                    <input type="number" placeholder = "결제할 금액을 입력해주세요 (₩)" name="price" min ="0" required>
-                    <input type="number" placeholder = "학생증 RFID를 찍어주세요" name="rfid" required>
+                    <input type="number" placeholder = "결제할 금액을 입력해주세요. (₩)" name="price" min ="0" required>
+                    <input type="number" placeholder = "RFID를 태그해주세요." name="rfid" required>
                     <div class="button">
                         <button type="submit" class="button1" >결제하기</button>
                     </div>
