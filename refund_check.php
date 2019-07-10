@@ -34,7 +34,7 @@
     }
     else
     {
-        $rfid = clean($_POST["rfid"]);
+        $rfid = $_POST["rfid"];
         $check="SELECT * FROM account_info WHERE rfid='$rfid'";
         $result=$mysqli->query($check); 
         $row=$result->fetch_array(MYSQLI_ASSOC);

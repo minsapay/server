@@ -1,7 +1,7 @@
 <?php
     include "../password.php";
     session_start();
-    $id=clean($_POST['id']);
+    $id=$_POST['id'];
     $pw=$_POST['pw'];
 
     require('db.php');
