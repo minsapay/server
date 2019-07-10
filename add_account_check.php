@@ -35,12 +35,12 @@
     else
     {
         // 행정위 직원이 들어왔을 때(정상적인 상황)
-        $numid=$_POST['id'];
+        $numid=clean($_POST['id']);
         if (isset($_POST['freepass']) && $_POST['freepass'] == 'yes') 
             $freepass=1;
         else
             $freepass=0;
-        switch($_POST['info'])
+        switch(clean($_POST['info']))
         {
             case "senior":
                 $balance=7000;
@@ -51,7 +51,7 @@
             default:
                 $balance=0;
         }
-        $rfid=$_POST['rfid'];
+        $rfid=clean($_POST['rfid']);
 
         if($numid==NULL ||  $rfid==NULL)
         {

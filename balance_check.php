@@ -8,8 +8,9 @@
         <body>
             <script language="javascript" type="text/javascript" src="include/header.js"></script>
             <?php
-                $id = $_POST["studentid"];
+
                 require('db.php');
+                $id = clean($_POST["studentid"]);
                 $check="SELECT * FROM account_info WHERE idnumber='$id' OR rfid='$id'";
                 $result=$mysqli->query($check); 
                 $row=$result->fetch_array(MYSQLI_ASSOC);

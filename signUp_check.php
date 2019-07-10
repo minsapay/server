@@ -1,7 +1,7 @@
 <?php
     include "../password.php";
     
-    $id=$_POST['id'];
+    $id=clean($_POST['id']);
     $pw=$_POST['pw'];
     $pwc=$_POST['pwc'];
     $booth=$_POST['booth'];
