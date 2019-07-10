@@ -10,8 +10,8 @@
             <?php
 
                 require('db.php');
-                $id = $_POST["studentid"];
-                $check="SELECT * FROM account_info WHERE idnumber=mysql_real_escape_string($id) OR rfid=mysql_real_escape_string($id)";
+                $id = clean($_POST["studentid"]);
+                $check="SELECT * FROM account_info WHERE idnumber='$id' OR rfid='$id'";
                 $result=$mysqli->query($check); 
                 $row=$result->fetch_array(MYSQLI_ASSOC);
                 if($result->num_rows==0)
@@ -41,7 +41,7 @@
                     </tr>
                     </thead>
                     <?php
-                        $result  = mysqli_query($mysqli,"SELECT * FROM transaction_list  WHERE who=mysql_real_escape_string($id);");
+                        $result  = mysqli_query($mysqli,"SELECT * FROM transaction_list  WHERE who='$id';");
                         $number=0;
                         echo("<tbody>");
                         while($newrow = mysqli_fetch_array( $result ) )
