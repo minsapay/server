@@ -7,12 +7,22 @@
         </head>
         <body>
             <script language="javascript" type="text/javascript" src="include/header.js"></script>
-            <h3>운영진 로그인</h3>
             <form method="POST" action="/login_check.php">
-                    <input type="text" placeholder="아이디 입력하기" name="id"/>
-                    <input type="password" placeholder="비밀번호 입력하기" name="pw"/>
-                    <button type="submit" class="button1">로그인</button>
+                <table>
+                    <tr><th>
+                        <h3 class = 'dataShower'>운영진 로그인</h3>
+                    </th></tr>
+
+                    <tr><th>
+                        <input type="text" placeholder="아이디 입력하기" name="id"/>
+                    </th></tr>
+
+                    <tr><th>
+                        <input type="password" placeholder="비밀번호 입력하기" name="pw"/>
+                    </th></tr>
+                </table>
             </form>
+                <button type="submit" class="button1">로그인</button>
             <button onclick="location.href='signUp.html'" class="button2"> 운영진 가입하기 </button>
             <script language="javascript" type="text/javascript" src="include/footer.js"></script>
         </body> 
