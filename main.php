@@ -19,7 +19,6 @@
     </head>
     <body>
         <script language="javascript" type="text/javascript" src="include/header.js"></script>
-        <h4>부스 운영진 · 민족제 운영진만 접속할 수 있습니다.</h4>
         <?php
             $id = $_SESSION['userid'];
 
@@ -30,9 +29,8 @@
             $row=$result->fetch_array(MYSQLI_ASSOC);
             $boothname = $row['boothname'];
 
-            echo "<h4> 현재 로그인 된 부스</h4>";
-            echo "<h3>",$boothname, "</h3>";
-            echo "<br>";
+            echo "<h3 class = 'dataShower'>현재 부스</h4>";
+            echo "<h2 class = 'dataShowerH2'>",$boothname, "</h3>";
             $isAdmin = $row['admin'];
             if($isAdmin==1)
             {
@@ -53,15 +51,15 @@
                         <button type="submit" class="button1" >결제하기</button>
                     </div>
                 </form>
-                <details>
-                <summary>결제 내역 보기</summary>
-                <table>
+
+                <h3 class = 'dataShower'>결제 기록</h3>
+                <table class = "BalanceRecordTable">
                     <thead>
                     <tr>
                     <th>번호</th>
                     <th>시간</th>
-                    <th>결제자</th>
-                    <th>판매액</th>
+                    <th>구매</th>
+                    <th>금액</th>
                     </tr>
                     </thead>
                     <?php
@@ -78,13 +76,12 @@
                             echo "<td>".$number."</td>";
                             echo "<td>".$time."</td>";
                             echo "<td>".$who."</td>";
-                            echo "<td>".$price."</td>";
+                            echo "<td>".number_format($price)."원</td>";
                             echo "</tr>";
                         }
                         echo("</tbody>");
                     ?>
                 </table>
-            </details>
                 <?php
             }
             else
