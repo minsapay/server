@@ -29,8 +29,8 @@
             $row=$result->fetch_array(MYSQLI_ASSOC);
             $boothname = $row['boothname'];
             echo "<br>";
-            echo "<table><tr><h3 class = 'dataShower'>현재 부스</h3></tr>";
-            echo "<tr><h2 class = 'dataShowerH2'>",$boothname,"</h2></tr></table>";
+            echo "<table><tr><th><h3 class = 'dataShower'>현재 부스</h3></th></tr>";
+            echo "<tr><th><h2 class = 'dataShowerH2'>",$boothname,"</h2></th></tr></table>";
             echo "<br>";
             $isAdmin = $row['admin'];
             if($isAdmin==1)
