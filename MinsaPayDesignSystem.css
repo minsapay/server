@@ -159,12 +159,14 @@ form {
 	border-bottom: 1px solid black;
 	padding: 0px;
 	margin: 0px;
+	margin-bottom: 10px;
 }
 
 .dataShower {
 	text-align: left;
 	padding: 0px;
 	margin: 0px;
+	margin-top: 10px;
 }
 
 summary {
