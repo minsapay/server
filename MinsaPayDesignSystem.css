@@ -14,7 +14,6 @@ body {
 	margin: 0;
 	left: 50%;
 	position: absolute;
-	-ms-transform: translate(-50%, 0%);
 	transform: translate(-50%, 0%);
 }
 
