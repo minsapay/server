@@ -27,8 +27,9 @@
                 echo "<tr><th><h2 class = 'dataShowerH2'>", number_format($balance), "원</h2></th></tr>";
                 if($row[freepass]) {
                     echo "<tr><th><h3 class = 'dataShower'>문화기획부 Freepass</h3></th></tr>";
-                    echo "<tr><th><h2 class = 'dataShowerH2' style = 'color: green'>Active</h2></th></tr></table>";
+                    echo "<tr><th><h2 class = 'dataShowerH2' style = 'color: green'>Active</h2></th></tr>";
                 }
+                echo "</table>";
                 ?>
                 <h3 class = 'dataShower'>계좌 기록</h3>
                 <table class = "BalanceRecordTable">
