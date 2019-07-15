@@ -32,7 +32,6 @@ h2 {
 
 h3 {
   font-size: 20px;
-  padding: 0px;
 }
 
 h4 {
@@ -159,12 +158,14 @@ form {
 
 .dataShowerH2 {
 	border-bottom: 1px solid black;
-	margin:0px;
+	padding: 0px;
+	margin: 0px;
 }
 
 .dataShower {
 	text-align: left;
-	margin:0px;
+	padding: 0px;
+	margin: 0px;
 }
 
 summary {
