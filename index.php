@@ -7,6 +7,7 @@
         </head>
         <body>
             <script language="javascript" type="text/javascript" src="include/header.js"></script>
+	    <br>
             <form method="POST" id="Balance Check Form" action="balance_check.php"autocomplete="off" >
                 <input type="number" name="studentid" placeholder = "아이디 입력 · RFID 태그" value="Student ID number"> <br>
             </form>
