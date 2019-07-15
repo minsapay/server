@@ -141,6 +141,7 @@ form {
 
 .BalanceRecordTable {
 	text-align: center;
+	font-size: 10px;
 }
 
 .BalanceRecordTable tr:nth-child(even) {background: #eeeeee}
