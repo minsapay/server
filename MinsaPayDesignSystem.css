@@ -111,13 +111,6 @@ td {
 	text-align: left;
 }
 
-tr:first-child th:first-child {
-    border-radius: 10px 10px 0 0;
-}
-tr:last-child th:first-child {
-    border-radius: 0 0 10px 10px;
-}
-
 input[type=radio] {
 	width: 5%
 }
@@ -142,4 +135,36 @@ li {
 form {
 	padding: 0px;
 	margin: 0px;
+}
+
+.BalanceRecordTable {
+	font-size: 10px;
+	text-align: center;
+}
+
+.BalanceRecordTable tr:nth-child(even) {background: #eeeeee}
+.BalanceRecordTable tr:nth-child(odd) {background: #ffffff}
+
+.BalanceRecordTable th{
+	text-align: center;
+	background-color: #FBBC56;
+	border: 0.5px solid black;
+}
+.BalanceRecordTable td{
+	text-align: center;
+	border: .5px solid black;
+}
+
+.dataShowerH2 {
+	border-bottom: 1px solid black;
+}
+
+.dataShower {
+	text-align: left;
+}
+
+summary {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
 }

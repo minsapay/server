@@ -21,21 +21,22 @@
                 }
                 $balance = $row['balance'];
                 $id = $row['idnumber'];
-                echo $id," 의 잔액은 ";
-                echo "<h4>", $balance, "원</h4>";
-                echo"입니다.";
-                if($row[freepass])
-                    echo "<br><br>당신은 문기부 FREEPASS 대상자 입니다.";
-            ?>
-            <br>
-            <details>
-                <summary>결제 내역 보기</summary>
-                <table>
+                echo "<table><tr><th><h3>계좌 번호</h3></th></tr>";
+                echo "<tr><th><h2 class = 'dataShowerH2'>", $id, "</h2></th></tr>";
+                echo "<table><tr><th><h3>잔액</h3></th></tr>";
+                echo "<tr><th><h2 class = 'dataShowerH2'>", number_format($balance), "원</h2></th></tr>";
+                if($row[freepass]) {
+                    echo "<tr><th><h3>문화기획부 Freepass</h3></th></tr>";
+                    echo "<tr><th><h2 class = 'dataShowerH2'>✅ 활성화됨</h2></th></tr></table>";
+                }
+                echo "<h3 class = 'dataShower'>계좌 기록</h3>";
+                ?>
+                <table class = "BalanceRecordTable">
                     <thead>
                     <tr>
                     <th>번호</th>
                     <th>시간</th>
-                    <th>부스명</th>
+                    <th>부스 이름</th>
                     <th>분류</th>
                     <th>잔액</th>
                     </tr>
@@ -72,13 +73,12 @@
                             echo "<td>".$time."</td>";
                             echo "<td>".$booth."</td>";
                             echo "<td>".$what."</td>";
-                            echo "<td>".$balance."</td>";
+                            echo "<td>".number_format($balance)."원</td>";
                             echo "</tr>";
                         }
                         echo("</tbody>");
                     ?>
                 </table>
-            </details>
             <script language="javascript" type="text/javascript" src="include/footer.js"></script>
         </body>
     </html>
