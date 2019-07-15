@@ -156,13 +156,13 @@ form {
 }
 
 .dataShowerH2 {
-	border-bottom: 1px solid black;
 	padding: 0px;
 	margin: 0px;
 	margin-bottom: 10px;
 }
 
 .dataShower {
+	color: #eeeeee;
 	text-align: left;
 	padding: 0px;
 	margin: 0px;
