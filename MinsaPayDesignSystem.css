@@ -104,11 +104,13 @@ table {
 }
 
 th {
-  text-align: left;
+	text-align: left;
+	margin: 0px;
 }
 
 td {
 	text-align: left;
+	margin: 0px;
 }
 
 input[type=radio] {
@@ -123,10 +125,6 @@ input[type=radio] {
 	display: inline-block;
 }
 
-.left {
-	text-align: left;
-}
-
 li {
 	text-align: left;
 	margin: 0px;
@@ -138,7 +136,6 @@ form {
 }
 
 .BalanceRecordTable {
-	font-size: 10px;
 	text-align: center;
 }
 
@@ -157,10 +154,12 @@ form {
 
 .dataShowerH2 {
 	border-bottom: 1px solid black;
+	margin:0px;
 }
 
 .dataShower {
 	text-align: left;
+	margin:0px;
 }
 
 summary {
