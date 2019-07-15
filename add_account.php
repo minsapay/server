@@ -39,7 +39,7 @@
         </head>
         <body>
         <script language="javascript" type="text/javascript" src="include/header.js"></script>
-        <h2>계좌 개설</h2>
+        <h3>계좌 개설 · 행정위원회</h3>
         <form action = "add_account_check.php" method="POST">
             <table>
                 <tr>

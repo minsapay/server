@@ -47,7 +47,7 @@
                     <input type="number" placeholder = "RFID를 태그해주세요." name="rfid" required>
                 </div>
                 <div class="button">
-                <button type="submit"  value="충전하기" class = "button1">계좌 충전하기</button>
+                <button type="submit"  value="충전하기" class = "button1">계좌 충전</button>
         </div>
     </form>
     <script language="javascript" type="text/javascript" src="include/footer.js"></script>
