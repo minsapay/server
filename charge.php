@@ -39,15 +39,15 @@
             <h3>계좌 충전 · 행정위원회</h3>
             <form action = "charge_check.php" method="POST">
                 <div>
-                    <label for="amount"><h3 class="left">충전할 금액</h3></label>
+                    <label for="amount"><h3 class="dataShower">충전할 금액</h3></label>
                     <input type="number" placeholder = "충전할 금액을 입력해주세요. (₩)" name="amount" min="0" required>
                 </div>
                 <div>
-                    <label for="rfid"><h3 class="left">RFID 태그</h3></label>
+                    <label for="rfid"><h3 class="dataShower">RFID 태그</h3></label>
                     <input type="number" placeholder = "RFID를 태그해주세요." name="rfid" required>
                 </div>
                 <div class="button">
-                <button type="submit"  value="충전하기" class = "button1">계좌 충전하기</button>
+                <button type="submit"  value="충전하기" class = "button1">계좌 충전</button>
         </div>
     </form>
     <script language="javascript" type="text/javascript" src="include/footer.js"></script>

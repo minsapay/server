@@ -43,13 +43,13 @@
         <form action = "add_account_check.php" method="POST">
             <table>
                 <tr>
-                    <th><h3>아이디</h3></th>
+                    <th><h3 class = 'dataShower'>아이디</h3></th>
                 </tr>
                 <tr>
                     <th><input type="number" placeholder="학생은 학번, 선생님은 생년월일 입력" name="id" min="160000" max="999999" required></th>
                 </tr>
                 <tr>
-                    <th><h3>문화기획부 프리패스</h3></th>
+                    <th><h3 class = 'dataShower'>문화기획부 프리패스</h3></th>
                 </tr>
                 <tr>
                     <th>
@@ -68,7 +68,7 @@
                     </th>
                 </tr>
                 <tr>
-                    <th><h3>가입 유형</h3></th>
+                    <th><h3 class = 'dataShower'>가입 유형</h3></th>
                 </tr>
                 <tr>
                     <th>
@@ -92,13 +92,13 @@
                     </th>
                 </tr>
                 <tr>
-                    <th><h3>RFID 태그</h3></th>
+                    <th><h3 class = 'dataShower'>RFID 태그</h3></th>
                 </tr>
                 <tr>
                     <th><input type="number" placeholder="RFID를 태그해주세요." name="rfid", required/></th>
                 </tr>
             </table>
-            <button type="submit" class="button1">계좌 개설하기</button>
+            <button type="submit" class="button1">계좌 개설</button>
         </form>
         <script language="javascript" type="text/javascript" src="include/footer.js"></script>
     </body>

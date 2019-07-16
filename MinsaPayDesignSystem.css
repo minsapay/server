@@ -14,7 +14,6 @@ body {
 	margin: 0;
 	left: 50%;
 	position: absolute;
-	-ms-transform: translate(-50%, 0%);
 	transform: translate(-50%, 0%);
 }
 
@@ -31,13 +30,16 @@ h2 {
 }
 
 h3 {
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 h4 {
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 h5 {
-  font-size: 15px; }
+  font-size: 15px;
+}
 
 h6 {
   color: #777777;
@@ -104,18 +106,13 @@ table {
 }
 
 th {
-  text-align: left;
+	text-align: left;
+	margin: 0px;
 }
 
 td {
 	text-align: left;
-}
-
-tr:first-child th:first-child {
-    border-radius: 10px 10px 0 0;
-}
-tr:last-child th:first-child {
-    border-radius: 0 0 10px 10px;
+	margin: 0px;
 }
 
 input[type=radio] {
@@ -123,15 +120,12 @@ input[type=radio] {
 }
 
 .smallp {
+	margin: 0px;
 	text-align: left;
 	font-size: 12px;
 	color: gray;
 	margin-left: 10px;
 	display: inline-block;
-}
-
-.left {
-	text-align: left;
 }
 
 li {
@@ -141,5 +135,48 @@ li {
 
 form {
 	padding: 0px;
+	margin: 0px;
+}
+
+.BalanceRecordTable {
+	text-align: center;
+	font-size: 10px;
+}
+
+.BalanceRecordTable tr:nth-child(even) {background: #eeeeee}
+.BalanceRecordTable tr:nth-child(odd) {background: #ffffff}
+
+.BalanceRecordTable th{
+	text-align: center;
+	background-color: #FBBC56;
+	border: 0.5px solid black;
+}
+.BalanceRecordTable td{
+	text-align: center;
+	border: .5px solid black;
+}
+
+.dataShowerH2 {
+	text-align: left;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.dataShower {
+	font-weight: normal;
+	text-align: left;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 10px;
+}
+
+summary {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+}
+
+label {
 	margin: 0px;
 }
