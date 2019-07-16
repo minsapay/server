@@ -67,6 +67,7 @@
                     <?php
                         $result  = mysqli_query($mysqli,"SELECT * FROM transaction_list  WHERE booth='$boothname';");
                         $number=0;
+                        $total=0;
                         echo("<tbody>");
                         while($newrow = mysqli_fetch_array( $result ) )
                         {
@@ -74,6 +75,7 @@
                             $time = $newrow['timestamp'];
                             $who =  $newrow['who'];
                             $price =  $newrow['price'];
+                            $total += $price;
                             echo "<tr>";
                             echo "<td>".$number."</td>";
                             echo "<td>".$time."</td>";
@@ -84,6 +86,10 @@
                         echo("</tbody>");
                     ?>
                 </table>
+                <br>
+                총액은
+                <?= $total?>
+                원 
             </details>
                 <?php
             }
