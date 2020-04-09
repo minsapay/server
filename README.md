@@ -13,7 +13,7 @@ Payment Server and Payment Web App for [KMLA](https://en.wikipedia.org/wiki/Kore
 |Project Management|[KMLA](https://en.wikipedia.org/wiki/Korean_Minjok_Leadership_Academy) Department of Finances and Information|
 |Payment Logic + Back-End Dev|[Jueon An](https://github.com/JueonAn)|
 |UI/UX Design + Front-End Dev|[Sunghyun Cho](https://github.com/anaclumos)|
-|RFID Tech Consultation|이승호|
+|RFID Tech Consultation|Seung Ho Lee|
 
 ## Tech Stacks
 
